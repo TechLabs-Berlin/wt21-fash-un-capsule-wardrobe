@@ -39,8 +39,10 @@ function App() {
           <Grid item xs={12} sm={3}>
             <ItemSelect />
           </Grid>
+          <Grid item xs={12}>
+            <ImageList />
+          </Grid>
         </Grid>
-      <ImageList />
       </Box>
       ;
     </>
