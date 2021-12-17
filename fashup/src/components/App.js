@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 
 import SearchBar from "./SearchBar";
 import ItemSelect from "./ItemSelect";
+import ImageList from "./ImageList";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <ItemSelect />
           </Grid>
         </Grid>
+      <ImageList />
       </Box>
       ;
     </>
