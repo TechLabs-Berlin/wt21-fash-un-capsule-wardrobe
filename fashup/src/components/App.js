@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import SearchBar from "./SearchBar";
 import ItemSelect from "./ItemSelect";
 import ImageList from "./ImageList";
+import StickyFooter from "./Footer";
 
 function App() {
   return (
@@ -44,7 +45,7 @@ function App() {
           </Grid>
         </Grid>
       </Box>
-      ;
+      <StickyFooter />;
     </>
   );
 }
