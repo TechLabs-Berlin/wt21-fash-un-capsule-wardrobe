@@ -1,25 +1,24 @@
 import React from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import { InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 
-function ItemSelect() {
-  const [item, setItem] = React.useState("");
+export const ItemSelect = (props) => {
+  const { onSelect, initialValue } = props;
 
   const handleChange = (event) => {
-    setItem(event.target.value);
+    onSelect(event.target.value);
   };
 
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label">Item</InputLabel>
       <Select
+        autoWidth
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={item}
+        value={initialValue}
         label="Item"
         onChange={handleChange}
+        sx={{ paddingLeft: "1%" }}
       >
         <MenuItem value={"shirt"}>Shirt</MenuItem>
         <MenuItem value={"hoodie"}>Hoodie</MenuItem>
@@ -27,6 +26,4 @@ function ItemSelect() {
       </Select>
     </FormControl>
   );
-}
-
-export default ItemSelect;
+};
