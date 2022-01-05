@@ -1,10 +1,12 @@
 import React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
+import {
+  CssBaseline,
+  Box,
+  Typography,
+  Container,
+  Link,
+  Grid,
+} from "@mui/material";
 
 function Copyright() {
   return (
@@ -34,7 +36,7 @@ export default function StickyFooter() {
         sx={{
           py: 3,
           px: 2,
-          mt: "auto",
+          mt: "10%",
           backgroundColor: (theme) =>
             theme.palette.mode === "light"
               ? theme.palette.grey[200]
@@ -43,12 +45,12 @@ export default function StickyFooter() {
       >
         <Container maxWidth="100%">
           <Grid
-            conainer
+            container
             spacing={1}
             columns={8}
             display="flex"
             justifyContent="center"
-            flexWrap="wrap"
+            flexwrap="wrap"
           >
             <Grid item xs={8} sm={1} textAlign="center">
               Product

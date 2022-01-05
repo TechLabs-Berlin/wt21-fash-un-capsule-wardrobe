@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2%;
+  align-items: center;
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.categories {
+  display: flex;
+  align-content: center;
+}
+ul {
+  padding: 0 0 0 0;
+}
+
+a {
+  text-decoration: none;
+}
