@@ -2,7 +2,6 @@ import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "./logo.png";
 import SearchBarWrapper from "./SearchBarWrapper";
-import "./SearchWindow.css";
 
 const SearchWindow = () => {
   const onClick = (event) => {
@@ -18,7 +17,13 @@ const SearchWindow = () => {
       container
       direction="row"
       className="searchWindow"
-      sx={{ height: "100%" }}
+      sx={{
+        backgroundImage: "linear-gradient(to right, #22f2e5, #ffc900)",
+        padding: " 3% 0 15% 0",
+        justifyContent: "space-between",
+        height: "80vh",
+        margin: "0 0",
+      }}
     >
       <Grid
         item
@@ -50,7 +55,7 @@ const SearchWindow = () => {
         item
         xs={12}
         md={6}
-        style={{ paddingRight: "5%", paddingTop: "10%", paddingLeft: "5%" }}
+        style={{ paddingRight: "5%", paddingTop: "5%", paddingLeft: "0%" }}
       >
         <Paper
           style={{
