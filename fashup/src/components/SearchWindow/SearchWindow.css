@@ -1,7 +1,8 @@
 .searchWindow {
-  background-color: #dff2f7;
-  padding: 20px 0 200px 0;
+  /* background-color: #dff2f7; */
+  background-image: linear-gradient(to right, #22f2e5, #ffc900);
+  padding: 3% 0 15% 0;
   justify-content: space-between;
-  height: auto;
+  height: 150vh;
   margin: 0 0;
 }

@@ -1,4 +1,4 @@
-import { Button, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "./logo.png";
 import SearchBarWrapper from "./SearchBarWrapper";
@@ -14,15 +14,26 @@ const SearchWindow = () => {
   const [itemSelectInput, setItemSelectInput] = useState("hoodie");
 
   return (
-    <Grid container direction="row" className="searchWindow">
+    <Grid
+      container
+      direction="row"
+      className="searchWindow"
+      sx={{ height: "100%" }}
+    >
       <Grid
         item
         xs={12}
         md={5}
-        style={{ paddingLeft: "5%", paddingRight: "5%" }}
+        style={{
+          paddingLeft: "5%",
+          paddingRight: "5%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
         <img src={logo} />
-        <Typography variant="h4">
+        <Typography variant="h3" sx={{ fontWeight: "bold" }}>
           Find your Best
           <br /> Vinted Match!
         </Typography>
@@ -43,21 +54,61 @@ const SearchWindow = () => {
       >
         <Paper
           style={{
-            height: "130%",
+            height: "100%",
             padding: "10px",
             display: "flex",
             alignItems: "center",
+            position: "relative",
+            border: "1px solid black",
           }}
         >
           <Grid container direction="column" rowSpacing={2}>
             <Grid item>
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "4%",
+                  left: "3%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: "50px",
+                }}
+              >
+                <Box
+                  sx={{
+                    height: "10px",
+                    width: "10px",
+                    border: "1px solid black",
+                    borderRadius: "50%",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    height: "10px",
+                    width: "10px",
+                    border: "1px solid black",
+                    borderRadius: "50%",
+                  }}
+                ></Box>
+                <Box
+                  sx={{
+                    height: "10px",
+                    width: "10px",
+                    border: "1px solid black",
+                    borderRadius: "50%",
+                  }}
+                ></Box>
+              </Box>
+            </Grid>
+            <Grid item sx={{ marginTop: "15%" }}>
               <SearchBarWrapper
                 onSelect={setItemSelectInput}
                 onLinkInput={setLinkInput}
                 initialSelectValue={itemSelectInput}
               />
             </Grid>
-            <Grid item sx={{ margin: "auto" }}>
+            <Grid item sx={{ margin: "auto auto 15% auto" }}>
               <Button
                 variant="contained"
                 size="medium"
