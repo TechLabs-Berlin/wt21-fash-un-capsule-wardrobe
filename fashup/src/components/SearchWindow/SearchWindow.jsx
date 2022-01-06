@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.png";
 import SearchBarWrapper from "./SearchBarWrapper";
 
@@ -7,10 +8,25 @@ const SearchWindow = () => {
   const onClick = (event) => {
     console.log(linkInput);
     console.log(itemSelectInput);
+    setLinkInputFromBtnClick(linkInput);
   };
 
   const [linkInput, setLinkInput] = useState("");
   const [itemSelectInput, setItemSelectInput] = useState("hoodie");
+  const [recommendation, setRecommendation] = useState({});
+  const [linkInputFromBtnClick, setLinkInputFromBtnClick] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/photos/${linkInput}`)
+      .then((res) => {
+        console.log(res);
+        setRecommendation(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [linkInputFromBtnClick]);
 
   return (
     <Grid
@@ -113,7 +129,7 @@ const SearchWindow = () => {
                 initialSelectValue={itemSelectInput}
               />
             </Grid>
-            <Grid item sx={{ margin: "auto auto 15% auto" }}>
+            <Grid item sx={{ margin: "auto" }}>
               <Button
                 variant="contained"
                 size="medium"
@@ -122,6 +138,7 @@ const SearchWindow = () => {
               >
                 Search
               </Button>
+              <img src={recommendation.url} />
             </Grid>
           </Grid>
         </Paper>
