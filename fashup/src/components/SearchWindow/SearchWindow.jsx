@@ -55,7 +55,7 @@ const SearchWindow = () => {
         item
         xs={12}
         md={6}
-        style={{ paddingRight: "5%", paddingTop: "5%", paddingLeft: "0%" }}
+        style={{ paddingRight: "5%", paddingTop: "5%", paddingLeft: "5%" }}
       >
         <Paper
           style={{
