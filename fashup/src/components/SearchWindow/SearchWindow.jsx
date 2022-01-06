@@ -29,7 +29,7 @@ const SearchWindow = () => {
         item
         xs={12}
         md={5}
-        style={{
+        sx={{
           paddingLeft: "5%",
           paddingRight: "5%",
           display: "flex",
