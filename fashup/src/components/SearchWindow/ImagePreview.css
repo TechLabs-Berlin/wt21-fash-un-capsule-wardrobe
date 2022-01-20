@@ -1,0 +1,54 @@
+.BoxUpload {
+  display: grid;
+  margin-top: 20px;
+  place-items: center;
+  border: 1px dashed #799cd9;
+  /* padding: 36px 48px; */
+  position: relative;
+  height: auto;
+  width: 350px;
+  background: #fbfbff;
+  border-radius: 20px;
+}
+
+.image-upload {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label:hover {
+  opacity: 0.8;
+}
+
+input {
+  display: none;
+}
+
+.close-icon {
+  background: #000;
+  border-radius: 5px;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 10;
+  right: 15px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  opacity: 1;
+}
+
+#uploaded-image {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}

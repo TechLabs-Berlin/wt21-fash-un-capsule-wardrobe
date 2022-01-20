@@ -2,7 +2,7 @@ import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import logo from "./logo.png";
-import DropZoneDialog from "./DropZoneDialog";
+import ImagePreview from "./ImagePreview";
 
 const SearchWindow = () => {
   return (
@@ -28,10 +28,14 @@ const SearchWindow = () => {
             paddingRight: "5%",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "left",
           }}
         >
-          <img src={logo} alt="Fashup Logo" />
+          <img
+            src={logo}
+            alt="Fashup Logo"
+            style={{ borderRadius: "50%", width: "30%", height: "auto" }}
+          />
           <Typography variant="h3" sx={{ fontWeight: "bold" }}>
             Find your Best
             <br /> Vinted Match!
@@ -103,12 +107,11 @@ const SearchWindow = () => {
               <Grid
                 item
                 sx={{
-                  marginTop: "15%",
                   display: "flex",
                   justifyContent: "center",
                 }}
               >
-                <DropZoneDialog />
+                <ImagePreview />
               </Grid>
               <Grid item sx={{ margin: "auto" }}>
                 <Button variant="contained" size="medium" color="primary">
