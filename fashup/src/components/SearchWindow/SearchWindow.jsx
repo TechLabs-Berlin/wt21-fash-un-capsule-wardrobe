@@ -2,35 +2,9 @@ import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import logo from "./logo.png";
-import SearchBarWrapper from "./SearchBarWrapper";
-import SearchResults from "../ImageList";
+import DropZoneDialog from "./DropZoneDialog";
 
 const SearchWindow = () => {
-  const onClick = (event) => {
-    console.log(linkInput);
-    console.log(itemSelectInput);
-    setLinkInputFromBtnClick(linkInput);
-  };
-
-  const [linkInput, setLinkInput] = useState("");
-  const [itemSelectInput, setItemSelectInput] = useState("hoodie");
-  const [recommendation, setRecommendation] = useState([]);
-  const [linkInputFromBtnClick, setLinkInputFromBtnClick] = useState("");
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://api.unsplash.com/search/photos?page=1&query=${linkInput}&client_id=Rc5M_gXWbiYiArGiG1Bun5IpCeUPTCJf6TUo3asOhf0`
-      )
-      .then((res) => {
-        console.log(res);
-        setRecommendation(res.data.results);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [linkInputFromBtnClick]);
-
   return (
     <Grid container>
       <Grid
@@ -126,20 +100,18 @@ const SearchWindow = () => {
                   ></Box>
                 </Box>
               </Grid>
-              <Grid item sx={{ marginTop: "15%" }}>
-                <SearchBarWrapper
-                  onSelect={setItemSelectInput}
-                  onLinkInput={setLinkInput}
-                  initialSelectValue={itemSelectInput}
-                />
+              <Grid
+                item
+                sx={{
+                  marginTop: "15%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <DropZoneDialog />
               </Grid>
               <Grid item sx={{ margin: "auto" }}>
-                <Button
-                  variant="contained"
-                  size="medium"
-                  color="secondary"
-                  onClick={onClick}
-                >
+                <Button variant="contained" size="medium" color="primary">
                   Search
                 </Button>
               </Grid>
@@ -147,7 +119,6 @@ const SearchWindow = () => {
           </Paper>
         </Grid>
       </Grid>
-      <SearchResults APIdata={recommendation} />
     </Grid>
   );
 };
