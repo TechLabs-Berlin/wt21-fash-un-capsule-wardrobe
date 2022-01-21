@@ -6,7 +6,7 @@ import ImagePreview from "./ImagePreview";
 
 const SearchWindow = () => {
   return (
-    <Grid container sx={{mt: 9}}>
+    <Grid container sx={{mt: 8}}>
       <Grid
         container
         direction="row"

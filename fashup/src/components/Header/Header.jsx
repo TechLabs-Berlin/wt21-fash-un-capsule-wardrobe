@@ -3,7 +3,8 @@ import "./Header.css";
 import logo from "./logo_tuerkis.png";
 import { Button, AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
-
+import { Drawer } from "@mui/material";
+import DrawerComponent from "./DrawerComponent";
 
 const Header = () => {
   const [value, setValue] = useState(0);
@@ -25,6 +26,7 @@ const Header = () => {
             Sign Up
           </Button>
         </Toolbar>
+        <DrawerComponent />
       </AppBar>
     </React.Fragment>
   );
