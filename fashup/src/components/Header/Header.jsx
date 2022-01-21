@@ -1,11 +1,11 @@
-import { Button } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import React from "react";
 import "./Header.css";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 
 const Header = () => {
   return (
-    <div className="header">
+    <Box className="header">
       <div className="logo">FASH UP</div>
       <div className="categories">
         <ul>
@@ -32,7 +32,7 @@ const Header = () => {
           Sign Up
         </Button>
       </div>
-    </div>
+    </Box>
   );
 };
 

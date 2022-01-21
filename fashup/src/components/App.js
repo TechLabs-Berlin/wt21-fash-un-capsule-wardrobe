@@ -41,7 +41,7 @@ function App() {
         >
           <Header />
           <SearchWindow />
-          <ImageList />
+          {/* <ImageList /> */}
           <StickyFooter />
         </Container>
       </div>

@@ -1,7 +1,6 @@
 import { Grid, TextField } from "@mui/material";
 import React from "react";
 import { ItemSelect } from "../ItemSelect";
-import "./SearchWindow.css";
 
 const SearchBarWrapper = (props) => {
   const { onSelect, onLinkInput, initialSelectValue } = props;
