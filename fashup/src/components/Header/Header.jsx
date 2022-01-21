@@ -21,7 +21,7 @@ const Header = () => {
             <Tab label="Help" />
           </Tabs>
 
-          <Button variant="outlined" color="primary" startIcon={<PersonAddAltIcon />} sx={{ marginLeft: "auto" }}>
+          <Button variant="outlined" color="primary" size="large" startIcon={<PersonAddAltIcon />} sx={{ marginLeft: "auto" }}>
             Sign Up
           </Button>
         </Toolbar>
