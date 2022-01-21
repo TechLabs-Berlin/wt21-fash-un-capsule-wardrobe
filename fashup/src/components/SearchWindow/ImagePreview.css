@@ -6,7 +6,7 @@
   /* padding: 36px 48px; */
   position: relative;
   height: auto;
-  width: 350px;
+  width: auto;
   background: #fbfbff;
   border-radius: 20px;
 }
@@ -21,6 +21,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
 }
 
 label:hover {
@@ -38,7 +39,7 @@ input {
   position: absolute;
   z-index: 10;
   right: 15px;
-  top: 20px;
+  top: 15px;
   cursor: pointer;
 }
 
@@ -47,8 +48,12 @@ input {
 }
 
 #uploaded-image {
-  height: 350px;
+  max-height: 200px;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 20px;
+}
+
+.ImagePreview {
+  max-height: 200px;
 }
