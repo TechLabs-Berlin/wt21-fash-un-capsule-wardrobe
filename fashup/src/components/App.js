@@ -29,7 +29,7 @@ function App() {
           mt: "50px",
         }}
       >
-        <Container
+        {/* <Container
           maxWidth="xl"
           // disableGutters
           style={{
@@ -38,12 +38,12 @@ function App() {
             justifyContent: "space-evenly",
             mt: "10px",
           }}
-        >
+        > */}
           <Header />
           <SearchWindow />
           {/* <ImageList /> */}
           <StickyFooter />
-        </Container>
+        {/* </Container> */}
       </div>
     </ThemeProvider>
   );

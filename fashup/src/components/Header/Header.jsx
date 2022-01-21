@@ -7,12 +7,12 @@ import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 const Header = () => {
   return (
     <React.Fragment>
-      <AppBar >
+      <AppBar  elevation={0}>
         <Toolbar sx={{ backgroundColor: "#BFEEED"}}>
           <img src={logo} alt="fashup logo" style={{width: "5%", height: "auto"}}/>
           
             <Tabs sx={{marginLeft:"auto"}} >
-              <Tab label="About Us"/>
+              <Tab variant="h3" label="About Us"/>
               <Tab label="Our API"/>
               <Tab label="Documentation" />
               <Tab label="Help" />
