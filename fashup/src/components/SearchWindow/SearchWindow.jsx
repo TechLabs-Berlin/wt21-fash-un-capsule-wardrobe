@@ -114,9 +114,9 @@ const SearchWindow = () => {
                 <ImagePreview />
               </Grid>
               <Grid item sx={{ margin: "auto" }}>
-                <Button variant="contained" size="medium" color="primary">
+                {/* <Button variant="contained" size="medium" color="primary">
                   Search
-                </Button>
+                </Button> */}
               </Grid>
             </Grid>
           </Paper>

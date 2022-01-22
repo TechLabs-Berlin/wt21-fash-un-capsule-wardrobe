@@ -1,18 +1,18 @@
 import React, { useState } from "react";
+import axios from "axios";
 import FolderIcon from "./folder_icon_transparent.png";
 import CloseIcon from "./close-icon.svg";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Button } from "@mui/material";
 import "./ImagePreview.css";
 
-function ImagePreview() {
+const ImagePreview = () => {
   const [image, setImage] = useState("");
   const [isUploaded, setIsUploaded] = useState(false);
-  const [typeFile, setTypeFile] = useState("");
 
-  function handleImageChange(e) {
+  const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setTypeFile(e.target.files[0].type);
       let reader = new FileReader();
+      console.log(e.target.files[0]);
 
       reader.onload = function (e) {
         setImage(e.target.result);
@@ -21,7 +21,18 @@ function ImagePreview() {
 
       reader.readAsDataURL(e.target.files[0]);
     }
-  }
+  };
+
+  const fileUploadHandler = () => {
+    const fd = new FormData();
+    fd.append("image", image);
+    console.log(fd);
+    axios
+      .post("https://jsonplaceholder.typicode.com/photos", fd)
+      .then((res) => {
+        console.log(res);
+      });
+  };
 
   return (
     <Container
@@ -71,8 +82,18 @@ function ImagePreview() {
           )}
         </div>
       </Box>
+      <Box sx={{ marginTop: "20px" }}>
+        <Button
+          variant="contained"
+          size="medium"
+          color="primary"
+          onClick={fileUploadHandler}
+        >
+          Search
+        </Button>
+      </Box>
     </Container>
   );
-}
+};
 
 export default ImagePreview;
