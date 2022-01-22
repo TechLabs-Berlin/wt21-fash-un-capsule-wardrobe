@@ -9,7 +9,7 @@ const DrawerComponent = () => {
     <React.Fragment>
         <Drawer anchor="right" open={openDrawer} onClose={() => setOpenDrawer(false)}>
             <List>
-                <ListItemButton>
+                <ListItemButton onClose={() => setOpenDrawer(false)}>
                     <ListItemIcon>
                         <ListItemText>
                             About Us
