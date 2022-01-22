@@ -6,7 +6,7 @@ import ImagePreview from "./ImagePreview";
 
 const SearchWindow = () => {
   return (
-    <Grid container>
+    <Grid container sx={{mt: 7}}>
       <Grid
         container
         direction="row"
@@ -41,7 +41,7 @@ const SearchWindow = () => {
             <br /> Vinted Match!
           </Typography>
           <br />
-          <Typography variant="body">
+          <Typography variant="body" align="justify">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
