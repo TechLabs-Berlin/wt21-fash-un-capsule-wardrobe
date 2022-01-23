@@ -25,10 +25,10 @@ const ImagePreview = () => {
 
   const fileUploadHandler = () => {
     const fd = new FormData();
-    fd.append("image", image);
+    fd.append("imagefile", image);
     console.log(fd);
     axios
-      .post("https://jsonplaceholder.typicode.com/photos", fd)
+      .post("http://127.0.0.1:5000/predict", fd)
       .then((res) => {
         console.log(res);
       });
