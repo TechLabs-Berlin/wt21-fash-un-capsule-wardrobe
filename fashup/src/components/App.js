@@ -6,6 +6,7 @@ import StickyFooter from "./Footer";
 import Header from "./Header/Header";
 import ImageList from "./ImageList";
 import { createTheme } from "@mui/material/styles";
+import MainHowTo from "./HowTo/MainHowTo";
 
 const theme = createTheme({
   palette: {
@@ -41,6 +42,7 @@ function App() {
         > */}
           <Header />
           <SearchWindow />
+          <MainHowTo />
           {/* <ImageList /> */}
           <StickyFooter />
         {/* </Container> */}
