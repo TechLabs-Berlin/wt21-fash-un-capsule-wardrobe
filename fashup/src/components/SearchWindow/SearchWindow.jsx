@@ -13,9 +13,9 @@ const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
         className="searchWindow"
         sx={{
           backgroundImage: "linear-gradient(to right, #22f2e5, #ffc900)",
-          padding: " 3% 0 15% 0",
+          padding: " 3% 0 10% 0",
           justifyContent: "space-between",
-          height: "80vh",
+          height: "auto",
           margin: "0 0",
         }}
       >
@@ -50,19 +50,26 @@ const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
           </Typography>
         </Grid>
         <Grid
+          container
           item
-          xs={12}
+          sm={12}
           md={6}
-          style={{ paddingRight: "5%", paddingTop: "5%", paddingLeft: "5%" }}
+          sx={{
+            paddingRight: "5%",
+            paddingLeft: "5%",
+            paddingTop: "5%",
+            justifyContent: "center",
+          }}
         >
           <Paper
             style={{
               height: "100%",
-              padding: "10px",
+              padding: "10px 30%",
               display: "flex",
               alignItems: "center",
               position: "relative",
-              border: "1px solid black",
+              border: "4px solid #48cae4",
+              borderRadius: "0 0 25px 25px",
             }}
           >
             <Grid container direction="column" rowSpacing={2}>

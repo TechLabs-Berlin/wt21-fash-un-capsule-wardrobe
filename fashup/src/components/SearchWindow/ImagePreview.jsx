@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import FolderIcon from "./folder_icon_transparent.png";
 import CloseIcon from "./close-icon.svg";
-import { Container, Box, Button } from "@mui/material";
+import { Grid, Container, Box, Button } from "@mui/material";
 import "./ImagePreview.css";
 
 const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
@@ -25,13 +25,14 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
   };
 
   return (
-    <Container
+    <Grid
+      container
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <h2>{vintedUsername ? vintedUsername : "kein Username"}</h2>
 
-      <Box className="BoxUpload">
-        <div className="image-upload">
+      <Grid item className="BoxUpload">
+        <Box className="image-upload">
           {!isUploaded ? (
             <>
               <label htmlFor="upload-input">
@@ -41,7 +42,9 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
                   alt="placeholder"
                   style={{ width: 100, height: 100 }}
                 />
-                <p style={{ color: "#444" }}>Click to upload image</p>
+                <p style={{ color: "#444", textAlign: "center" }}>
+                  Click to upload image
+                </p>
               </label>
 
               <input
@@ -70,9 +73,9 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
               />
             </Box>
           )}
-        </div>
-      </Box>
-      <Box sx={{ marginTop: "20px" }}>
+        </Box>
+      </Grid>
+      <Grid item sx={{ marginTop: "20px" }}>
         <Button
           variant="contained"
           size="medium"
@@ -83,8 +86,8 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
         >
           Search
         </Button>
-      </Box>
-    </Container>
+      </Grid>
+    </Grid>
   );
 };
 
