@@ -1,33 +1,34 @@
 import React, { useState } from "react";
+import axios from "axios";
 import FolderIcon from "./folder_icon_transparent.png";
 import CloseIcon from "./close-icon.svg";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Button } from "@mui/material";
 import "./ImagePreview.css";
 
-function ImagePreview() {
-  const [image, setImage] = useState("");
+const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
+  const [image, setImage] = useState(null);
   const [isUploaded, setIsUploaded] = useState(false);
-  const [typeFile, setTypeFile] = useState("");
+  const [imagePreview, setImagePreview] = useState("");
 
-  function handleImageChange(e) {
+  const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setTypeFile(e.target.files[0].type);
       let reader = new FileReader();
+      setImage(e.target.files[0]);
 
       reader.onload = function (e) {
-        setImage(e.target.result);
+        setImagePreview(e.target.result);
         setIsUploaded(true);
       };
 
       reader.readAsDataURL(e.target.files[0]);
     }
-  }
+  };
 
   return (
     <Container
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h2>Upload your image</h2>
+      <h2>{vintedUsername ? vintedUsername : "kein Username"}</h2>
 
       <Box className="BoxUpload">
         <div className="image-upload">
@@ -63,7 +64,7 @@ function ImagePreview() {
               />
               <img
                 id="uploaded-image"
-                src={image}
+                src={imagePreview}
                 draggable={false}
                 alt="uploaded-img"
               />
@@ -71,8 +72,20 @@ function ImagePreview() {
           )}
         </div>
       </Box>
+      <Box sx={{ marginTop: "20px" }}>
+        <Button
+          variant="contained"
+          size="medium"
+          color="primary"
+          onClick={() => {
+            handleImageUpload(image);
+          }}
+        >
+          Search
+        </Button>
+      </Box>
     </Container>
   );
-}
+};
 
 export default ImagePreview;

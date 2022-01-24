@@ -6,6 +6,7 @@ import StickyFooter from "./Footer";
 import Header from "./Header/Header";
 import ImageList from "./ImageList";
 import { createTheme } from "@mui/material/styles";
+import { useImageUpload } from "./SearchWindow/useImageUpload";
 
 const theme = createTheme({
   palette: {
@@ -19,6 +20,17 @@ const theme = createTheme({
 });
 
 function App() {
+  const {
+    handleImageUpload,
+    dataAvailable,
+    imagePaths,
+    price,
+    vintedURL,
+    vintedUsername,
+    isLoading,
+    errorMassage,
+  } = useImageUpload({ apiURL: "http://localhost:5000/api/process-image" });
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -29,7 +41,7 @@ function App() {
           mt: "50px",
         }}
       >
-        <Container
+        {/* <Container
           maxWidth="xl"
           // disableGutters
           style={{
@@ -38,12 +50,16 @@ function App() {
             justifyContent: "space-evenly",
             mt: "10px",
           }}
-        >
-          <Header />
-          <SearchWindow />
-          {/* <ImageList /> */}
-          <StickyFooter />
-        </Container>
+        > */}
+        <Header />
+        <SearchWindow
+          handleImageUpload={handleImageUpload}
+          dataAvailable={dataAvailable}
+          vintedUsername={vintedUsername}
+        />
+        {/* <ImageList /> */}
+        <StickyFooter />
+        {/* </Container> */}
       </div>
     </ThemeProvider>
   );

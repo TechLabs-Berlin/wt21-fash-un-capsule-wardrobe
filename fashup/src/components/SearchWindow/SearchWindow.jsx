@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.png";
 import ImagePreview from "./ImagePreview";
 
-const SearchWindow = () => {
+const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
   return (
-    <Grid container>
+    <Grid container sx={{ mt: 7 }}>
       <Grid
         container
         direction="row"
@@ -41,7 +41,7 @@ const SearchWindow = () => {
             <br /> Vinted Match!
           </Typography>
           <br />
-          <Typography variant="body">
+          <Typography variant="body" align="justify">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -111,12 +111,16 @@ const SearchWindow = () => {
                   justifyContent: "center",
                 }}
               >
-                <ImagePreview />
+                <ImagePreview
+                  handleImageUpload={handleImageUpload}
+                  dataAvailable={dataAvailable}
+                  vintedUsername={vintedUsername}
+                />
               </Grid>
               <Grid item sx={{ margin: "auto" }}>
-                <Button variant="contained" size="medium" color="primary">
+                {/* <Button variant="contained" size="medium" color="primary">
                   Search
-                </Button>
+                </Button> */}
               </Grid>
             </Grid>
           </Paper>
