@@ -15,7 +15,7 @@ const SearchWindow = () => {
           backgroundImage: "linear-gradient(to right, #22f2e5, #ffc900)",
           padding: " 3% 0 15% 0",
           justifyContent: "space-between",
-          height: "80vh",
+          height: "auto",
           margin: "0 0",
         }}
       >
