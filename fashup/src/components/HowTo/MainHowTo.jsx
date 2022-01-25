@@ -11,7 +11,7 @@ const MainHowTo = () => {
       <Grid container align="center" sx={{backgroundImage: "linear-gradient(180deg, #54D2D2 0%, rgba(255, 255, 255, 0.237847) 100%, rgba(196, 196, 196, 0) 100%)"}}>
         <Grid container justifyContent="center" >
             <Grid item sx={{my: "50px"}}>
-                <Typography variant="h3" align="center">How the magic works</Typography>
+                <Typography variant="h3" align="center" sx={{ fontWeight: "500"}}>How the magic works!</Typography>
             </Grid>
         </Grid>
         <Grid container direction="row" justifyContent="center" alignItems="center" spacing={8} sx={{ height: "500px"}}>
