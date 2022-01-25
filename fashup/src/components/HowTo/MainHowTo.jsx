@@ -15,7 +15,7 @@ const MainHowTo = () => {
             </Grid>
         </Grid>
         <Grid container direction="row" justifyContent="center" alignItems="center" spacing={8} sx={{ height: "500px"}}>
-            <Grid item>
+            <Grid item xs={12} md={4} lg={4}>
                 <Box component="div" sx={{mt: "30px"}}>
                     <img src={SelectItem} alt="UploadItem"/>
                     <Typography variant="h4" sx={{ fontWeight: "bold" }}> Step 1 </Typography>
@@ -23,7 +23,7 @@ const MainHowTo = () => {
                 </Box>
             </Grid>
 
-            <Grid item>
+            <Grid item xs={12} md={4} lg={4}>
                 <Box component="div" sx={{mt: "30px"}}>
                     <img src={UploadItem} alt="UploadItem"/>
                     <Typography variant="h4" sx={{ fontWeight: "bold" }}> Step 2 </Typography>
@@ -31,7 +31,7 @@ const MainHowTo = () => {
                 </Box>
             </Grid>
 
-            <Grid item>
+            <Grid item xs={12} md={4} lg={4}>
                 <Box component="div" sx={{mt: "30px"}}>
                     <img src={NavigateToItem} alt="UploadItem"/>
                     <Typography variant="h4" sx={{ fontWeight: "bold" }}> Step 3 </Typography>
