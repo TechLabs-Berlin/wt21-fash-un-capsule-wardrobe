@@ -14,7 +14,7 @@ const Header = () => {
     console.log(isMatch);
 
   return (
-    <React.Fragment>
+    <div>
       <AppBar elevation={0}>
         <Toolbar sx={{ backgroundColor: "#BFEEED" }}>
           
@@ -48,7 +48,7 @@ const Header = () => {
         </Toolbar>
         
       </AppBar>
-    </React.Fragment>
+    </div>
   );
 };
 

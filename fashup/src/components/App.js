@@ -29,6 +29,7 @@ function App() {
         style={{
           height: "auto",
           mt: "50px",
+          display: "grid"
         }}
       >
         {/* <Container
