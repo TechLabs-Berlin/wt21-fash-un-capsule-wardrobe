@@ -6,6 +6,7 @@ import StickyFooter from "./Footer";
 import Header from "./Header/Header";
 import ImageList from "./ImageList";
 import { createTheme } from "@mui/material/styles";
+import { useImageUpload } from "./SearchWindow/useImageUpload";
 import MainHowTo from "./HowTo/MainHowTo";
 import Footer from "./Footer/Footer"
 
@@ -21,6 +22,17 @@ const theme = createTheme({
 });
 
 function App() {
+  const {
+    handleImageUpload,
+    dataAvailable,
+    imagePaths,
+    price,
+    vintedURL,
+    vintedUsername,
+    isLoading,
+    errorMassage,
+  } = useImageUpload({ apiURL: "http://localhost:5000/api/process-image" });
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -44,10 +56,8 @@ function App() {
         > */}
           <Header />
           <SearchWindow />
-          <MainHowTo />
-          <Footer />
           {/* <ImageList /> */}
-          {/* <StickyFooter /> */}
+          <StickyFooter />
         {/* </Container> */}
       </div>
     </ThemeProvider>

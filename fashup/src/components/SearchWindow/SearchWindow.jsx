@@ -4,10 +4,22 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.png";
 import ImagePreview from "./ImagePreview";
 
-const SearchWindow = () => {
+const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
   return (
     <div>
-      <Grid container sx={{ mt: 7 }}>
+    <Grid container sx={{ mt: 7 }}>
+      <Grid
+        container
+        direction="row"
+        className="searchWindow"
+        sx={{
+          backgroundImage: "linear-gradient(to right, #22f2e5, #ffc900)",
+          padding: " 3% 0 15% 0",
+          justifyContent: "space-between",
+          height: "80vh",
+          margin: "0 0",
+        }}
+      >
         <Grid
           container
           direction="row"
@@ -101,10 +113,43 @@ const SearchWindow = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <ImagePreview />
-                </Grid>
-                {/* <Grid item sx={{ margin: "auto" }}>
-                <Button variant="contained" size="medium" color="primary">
+                  <Box
+                    sx={{
+                      height: "10px",
+                      width: "10px",
+                      border: "1px solid black",
+                      borderRadius: "50%",
+                    }}
+                  ></Box>
+                  <Box
+                    sx={{
+                      height: "10px",
+                      width: "10px",
+                      border: "1px solid black",
+                      borderRadius: "50%",
+                    }}
+                  ></Box>
+                  <Box
+                    sx={{
+                      height: "10px",
+                      width: "10px",
+                      border: "1px solid black",
+                      borderRadius: "50%",
+                    }}
+                  ></Box>
+                </Box>
+              </Grid>
+              <Grid
+                item
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <ImagePreview />
+              </Grid>
+              <Grid item sx={{ margin: "auto" }}>
+                {/* <Button variant="contained" size="medium" color="primary">
                   Search
                 </Button>
               </Grid> */}
