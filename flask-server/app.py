@@ -73,7 +73,19 @@ def index():
         urls.append('http://'+host+":"+port+"/static/"+uuids[i]+'.jpg')
 
     #build response #TODO Replace with real data
-    response = jsonify({ "imagePaths": urls, "price": "100 €",  "vintedURL": "https://www.vinted.com/test/bla", "vintedUsername" : "mmustermann" })
+    response = jsonify({'image': 'https://images.vinted.net/t/03_00cf6_VcEwGpEzmaeEGyAKesJWcs1t/1641447461.jpeg?s=e00f59500f8ad1f5ecce44cb49f18a5407e41217',
+   'website-url': 'https://www.vinted.de/women/clothes/activewear/tops-and-t-shirts/1544170641-columbia-dry-wicking-tank',
+   'price': '$3.00',
+   'vintedUsername': 'aliza_dutt',
+   'title': 'Columbia Dry-Wicking Tank'},{'image': 'https://images.vinted.net/t/03_00cf6_VcEwGpEzmaeEGyAKesJWcs1t/1641447461.jpeg?s=e00f59500f8ad1f5ecce44cb49f18a5407e41217',
+   'website-url': 'https://www.vinted.de/women/clothes/activewear/tops-and-t-shirts/1544170641-columbia-dry-wicking-tank',
+   'price': '$3.00',
+   'vintedUsername': 'aliza_dutt',
+   'title': 'Columbia Dry-Wicking Tank'},{'image': 'https://images.vinted.net/t/03_00cf6_VcEwGpEzmaeEGyAKesJWcs1t/1641447461.jpeg?s=e00f59500f8ad1f5ecce44cb49f18a5407e41217',
+   'website-url': 'https://www.vinted.de/women/clothes/activewear/tops-and-t-shirts/1544170641-columbia-dry-wicking-tank',
+   'price': '$3.00',
+   'vintedUsername': 'aliza_dutt',
+   'title': 'Columbia Dry-Wicking Tank'})
 
     #disable cors
     response.headers.add('Access-Control-Allow-Origin', '*')

@@ -2,7 +2,12 @@ import { Grid, Typography } from "@mui/material";
 import logo from "./logo.png";
 import ImagePreview from "./ImagePreview";
 
-const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
+const SearchWindow = ({
+  handleImageUpload,
+  vintedUsername,
+  dataAvailable,
+  imagePaths,
+}) => {
   return (
     <Grid
       container
@@ -15,16 +20,15 @@ const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
         margin: "0 0",
       }}
     >
-      <img
-        src={logo}
-        alt="Fashup Logo"
-        style={{
-          borderRadius: "50%",
-          maxWidth: "180px",
-          position: "static",
-        }}
-      />
       <Grid container direction="row" sx={{ justifyContent: "center" }}>
+        {/* <img
+          src={logo}
+          alt="Fashup Logo"
+          style={{
+            borderRadius: "50%",
+            maxWidth: "180px",
+          }}
+        /> */}
         <Grid
           item
           sx={{
@@ -58,6 +62,7 @@ const SearchWindow = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
           handleImageUpload={handleImageUpload}
           dataAvailable={dataAvailable}
           vintedUsername={vintedUsername}
+          imagePaths={imagePaths}
         />
       </Grid>
     </Grid>

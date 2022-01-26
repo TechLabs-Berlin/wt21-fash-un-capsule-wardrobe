@@ -56,8 +56,9 @@ function App() {
           handleImageUpload={handleImageUpload}
           dataAvailable={dataAvailable}
           vintedUsername={vintedUsername}
+          imagePaths={imagePaths}
         />
-        {/* <ImageList /> */}
+        <ImageList imagePaths={imagePaths} />
         <StickyFooter />
         {/* </Container> */}
       </div>
