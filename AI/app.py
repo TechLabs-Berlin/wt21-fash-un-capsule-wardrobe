@@ -21,7 +21,7 @@ import os
 
 app = Flask(__name__)
 model = torchvision.models.resnet50(pretrained=True) # load ResNet50
-database_path = "./database/*.jpeg"
+database_path = "/TechLab/3. Project/3. Code/wt21-fash-un-capsule-wardrobe/AI/database/*.jpeg"
 
 def preproc(d: DocumentArray):
         return (d.load_uri_to_image_tensor()  # load
@@ -31,13 +31,13 @@ def preproc(d: DocumentArray):
 
 #connection to FE
 @app.route('/', methods=['GET'])
-def hello_world():
+def display_FE():
     return render_template('index.html')
 
-#ML Pipeline:
-@app.route('/about')
-def about():
-   pass
+##Backend:
+#@app.route('/about')
+#def about():
+#   pass
 
 @app.route('/', methods=['POST'])
 def predict():
@@ -58,7 +58,7 @@ def predict():
         for m in d.matches:
             print(d.uri, m.uri, m.scores['cosine'].value)
 
-    classification = (DocumentArray(left_da[0].matches, copy=True).apply(lambda d: d.set_image_tensor_channel_axis(0, -1).set_image_tensor_inv_normalization()).plot_image_sprites(output='static/images/result.jpeg'))
+    classification = (DocumentArray(left_da[0].matches, copy=True).apply(lambda d: d.set_image_tensor_channel_axis(0, -1).set_image_tensor_inv_normalization()).plot_image_sprites(output='/TechLab/3. Project/3. Code/wt21-fash-un-capsule-wardrobe/AI/static/images/result.jpeg'))
 
     return render_template('index.html', prediction = 1)
     
