@@ -34,15 +34,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div
-        className="App"
-        style={{
-          height: "auto",
-          mt: "50px",
-          display: "grid"
-        }}
-      >
+      
         <Container
           maxWidth="xl"
           disableGutters
@@ -64,7 +56,6 @@ function App() {
           <MainHowTo />
           <Footer />
         </Container>
-      </div>
     </ThemeProvider>
   );
 }
