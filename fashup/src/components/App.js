@@ -43,28 +43,27 @@ function App() {
           display: "grid"
         }}
       >
-        {/* <Container
+        <Container
           maxWidth="xl"
-          // disableGutters
+          disableGutters
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-evenly",
             mt: "10px",
           }}
-        > */}
-        <Header />
-        
-        <SearchWindow
-          handleImageUpload={handleImageUpload}
-          dataAvailable={dataAvailable}
-          vintedUsername={vintedUsername}
-          imagePaths={imagePaths}
-        />
-        <ImageList imagePaths={imagePaths} />
-        <MainHowTo />
-        <Footer />
-        {/* </Container> */}
+        >
+          <Header />
+          <SearchWindow
+            handleImageUpload={handleImageUpload}
+            dataAvailable={dataAvailable}
+            vintedUsername={vintedUsername}
+            imagePaths={imagePaths}
+          />
+          <ImageList imagePaths={imagePaths} />
+          <MainHowTo />
+          <Footer />
+        </Container>
       </div>
     </ThemeProvider>
   );
