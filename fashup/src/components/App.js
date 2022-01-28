@@ -2,7 +2,6 @@ import React from "react";
 import { Container, CssBaseline, ThemeProvider } from "@mui/material";
 
 import SearchWindow from "./SearchWindow/SearchWindow";
-import StickyFooter from "./Footer";
 import Header from "./Header/Header";
 import ImageList from "./ImageList";
 import { createTheme } from "@mui/material/styles";
