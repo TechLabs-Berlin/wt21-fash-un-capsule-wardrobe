@@ -34,7 +34,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      
+      <CssBaseline />
         <Container
           maxWidth="xl"
           disableGutters
@@ -45,6 +45,7 @@ function App() {
             mt: "10px",
           }}
         >
+          
           <Header />
           <SearchWindow
             handleImageUpload={handleImageUpload}

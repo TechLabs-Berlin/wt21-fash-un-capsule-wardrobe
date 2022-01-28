@@ -23,59 +23,61 @@ const Header = () => {
   // console.log(isMatch);
 
   return (
-    <div>
-      <AppBar elevation={0}>
-        <Toolbar sx={{ backgroundColor: "#BFEEED" }}>
-          {isMatch ? (
-            <>
-              <img
-                src={logo}
-                alt="fashup logo"
-                style={{ width: "5%", height: "auto" }}
-              />
-              <Button
-                variant="outlined"
-                color="primary"
-                size="large"
-                startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto" }}
-              >
-                Sign Up
-              </Button>
-              <DrawerComponent />
-            </>
-          ) : (
-            <>
-              <img
-                src={logo}
-                alt="fashup logo"
-                style={{ width: "5%", height: "auto" }}
-              />
-              <Tabs
-                sx={{ marginLeft: "auto" }}
-                value={value}
-                onChange={(e, value) => setValue(value)}
-                indicatorColor="primary"
-              >
-                <Tab label="About Us" />
-                <Tab label="Our API" />
-                <Tab label="Documentation" />
-                <Tab label="Help" />
-              </Tabs>
-              <Button
-                variant="outlined"
-                color="primary"
-                size="large"
-                startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto" }}
-              >
-                Sign Up
-              </Button>
-            </>
-          )}
-        </Toolbar>
+    
+      <AppBar elevation={0} position="sticky">
+        <Container disableGutters maxWidth="xl" >
+          <Toolbar  sx={{ backgroundColor: "#BFEEED", pl: "0px" }}>
+            {isMatch ? (
+              <>
+                <img
+                  src={logo}
+                  alt="fashup logo"
+                  style={{ width: "5%", height: "auto" }}
+                />
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  size="large"
+                  startIcon={<PersonAddAltIcon />}
+                  sx={{ marginLeft: "auto" }}
+                >
+                  Sign Up
+                </Button>
+                <DrawerComponent />
+              </>
+            ) : (
+              <>
+                <img
+                  src={logo}
+                  alt="fashup logo"
+                  style={{ width: "5%", height: "auto" }}
+                />
+                <Tabs
+                  sx={{ marginLeft: "auto" }}
+                  value={value}
+                  onChange={(e, value) => setValue(value)}
+                  indicatorColor="primary"
+                >
+                  <Tab label="About Us" />
+                  <Tab label="Our API" />
+                  <Tab label="Documentation" />
+                  <Tab label="Help" />
+                </Tabs>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  size="large"
+                  startIcon={<PersonAddAltIcon />}
+                  sx={{ marginLeft: "auto" }}
+                >
+                  Sign Up
+                </Button>
+              </>
+            )}
+          </Toolbar>
+        </Container>
       </AppBar>
-    </div>
+   
   );
 };
 
