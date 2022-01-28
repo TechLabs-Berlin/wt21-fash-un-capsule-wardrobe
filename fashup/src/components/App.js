@@ -54,10 +54,15 @@ function App() {
             mt: "10px",
           }}
         > */}
-          <Header />
-          <SearchWindow />
-          {/* <ImageList /> */}
-          <StickyFooter />
+        <Header />
+        <SearchWindow
+          handleImageUpload={handleImageUpload}
+          dataAvailable={dataAvailable}
+          vintedUsername={vintedUsername}
+          imagePaths={imagePaths}
+        />
+        <ImageList imagePaths={imagePaths} />
+        <StickyFooter />
         {/* </Container> */}
       </div>
     </ThemeProvider>
