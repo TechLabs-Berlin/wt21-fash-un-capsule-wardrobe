@@ -54,6 +54,7 @@ function App() {
           }}
         > */}
         <Header />
+        
         <SearchWindow
           handleImageUpload={handleImageUpload}
           dataAvailable={dataAvailable}
@@ -61,7 +62,8 @@ function App() {
           imagePaths={imagePaths}
         />
         <ImageList imagePaths={imagePaths} />
-        <StickyFooter />
+        <MainHowTo />
+        <Footer />
         {/* </Container> */}
       </div>
     </ThemeProvider>
