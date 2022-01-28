@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "./logo_tuerkis.png";
+import logo from "./300x300.png";
 import {
   Button,
+  Container,
   AppBar,
   Toolbar,
   Tabs,
@@ -22,15 +23,15 @@ const Header = () => {
   // console.log(isMatch);
 
   return (
-    <div>
-      <AppBar elevation={0}>
+    <AppBar elevation={0} position="sticky">
+      <Container disableGutters maxWidth="xl">
         <Toolbar sx={{ backgroundColor: "#BFEEED" }}>
           {isMatch ? (
             <>
               <img
                 src={logo}
                 alt="fashup logo"
-                style={{ width: "5%", height: "auto" }}
+                style={{ width: "100px", height: "auto" }}
               />
               <Button
                 variant="outlined"
@@ -48,7 +49,7 @@ const Header = () => {
               <img
                 src={logo}
                 alt="fashup logo"
-                style={{ width: "5%", height: "auto" }}
+                style={{ width: "100px", height: "auto" }}
               />
               <Tabs
                 sx={{ marginLeft: "auto" }}
@@ -73,8 +74,8 @@ const Header = () => {
             </>
           )}
         </Toolbar>
-      </AppBar>
-    </div>
+      </Container>
+    </AppBar>
   );
 };
 
