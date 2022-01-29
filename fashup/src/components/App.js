@@ -53,8 +53,13 @@ function App() {
           vintedUsername={vintedUsername}
           imagePaths={imagePaths}
         />
-        <ImageList imagePaths={imagePaths} />
-        <MainHowTo />
+
+        {!dataAvailable ? (
+          <MainHowTo />
+        ) : (
+          <ImageList imagePaths={imagePaths} dataAvailable={dataAvailable} />
+        )}
+
         <Footer />
       </Container>
     </ThemeProvider>

@@ -27,33 +27,7 @@ export const useImageUpload = ({ apiURL }) => {
     console.log(response.data);
     console.log(imagePaths);
 
-    //send the file to the server
-    // try {
-    //   const {
-    //     data: { imagePaths, price, vintedURL, vintedUsername },
-    //   } = await axios.post(apiURL, formData, {
-    //     headers: {
-    //       "Content-Type": "multipart/form-data",
-    //     },
-    //   });
-
-    //   //set the data to state
-    //   setPrice(price);
-    //   setImagePaths(imagePaths);
-    //   setVintedURL(vintedURL);
-    //   setVintedUsername(vintedUsername);
-    //   setIsLoading(false);
-    //   setDataAvailable(true);
-    //   console.log({ vintedUsername });
-    // } catch ({ message }) {
-    //   setErrorMassage(message);
-    //   setPrice(0);
-    //   setImagePaths([]);
-    //   setVintedURL("");
-    //   setVintedUsername("");
-    //   setIsLoading(false);
-    //   setDataAvailable(false);
-    // }
+    setDataAvailable(true);
   };
 
   return {

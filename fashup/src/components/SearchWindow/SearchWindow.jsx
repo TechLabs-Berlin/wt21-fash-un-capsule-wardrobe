@@ -14,8 +14,8 @@ const SearchWindow = ({
       direction="column"
       className="searchWindow"
       sx={{
-        backgroundImage: "linear-gradient(to bottom, #22f2e5, #ffc900)",
-        padding: " 10% 0 5% 0",
+        backgroundImage: "linear-gradient(to bottom, #54D2D2, #ffc900)",
+        padding: " 5% 0 5% 0",
         height: "auto",
         margin: "0 0",
       }}
