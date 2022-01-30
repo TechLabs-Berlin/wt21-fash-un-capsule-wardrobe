@@ -1,0 +1,11 @@
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #54d2d2;
+}
+
+Chip:nth-of-type(2) {
+  background-color: #7986cb;
+}

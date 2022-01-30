@@ -8,12 +8,12 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material/";
+import "./ImageList.css";
 
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 
-export default function SearchResults(props) {
-  const { imagePaths } = props;
-  const sortingItems = [
+export default function SearchResults({ imagePaths }) {
+  const sortingOpts = [
     "Brand",
     "Type",
     "Color",
@@ -42,21 +42,30 @@ export default function SearchResults(props) {
       </Grid>
       <Grid item my="20px" sx={{ justifyContent: "center", display: "flex" }}>
         <Stack direction="row" spacing={2} sx={{ flexWrap: "wrap" }}>
-          {sortingItems.map((item) => (
+          {sortingOpts.map((item) => (
             <Chip
-              sx={{
-                fontSize: "25px",
-                height: "55px",
-                fontWeight: "bold",
-                bgcolor: "#54D2D2", // Farbe für jeden zweiten Tag: bgcolor: "#7986cb
-                mb: "10px",
-              }}
+              sx={
+                sortingOpts.indexOf(item) % 2
+                  ? {
+                      bgcolor: "#7986cb",
+                      fontSize: "25px",
+                      height: "55px",
+                      fontWeight: "bold",
+                      mb: "10px",
+                    }
+                  : {
+                      bgcolor: "#54D2D2",
+                      fontSize: "25px",
+                      height: "55px",
+                      fontWeight: "bold",
+                      mb: "10px",
+                    }
+              }
               label={item}
               clickable
             />
           ))}
         </Stack>
-        ;
       </Grid>
       <Grid item>
         <Grid
@@ -80,7 +89,11 @@ export default function SearchResults(props) {
                 alt={item.title}
               />
               <CardContent>
-                <a href={item.websiteUrl} target="_blank">
+                <a
+                  href={item.websiteUrl}
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
                   <Typography gutterBottom variant="h6" component="div">
                     {item.title}
                   </Typography>
@@ -99,7 +112,12 @@ export default function SearchResults(props) {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography pt="5px" variant="body2" color="green">
+                    <Typography
+                      pt="5px"
+                      variant="body2"
+                      color="green"
+                      fontWeight="bold"
+                    >
                       {item.price}
                     </Typography>
                   </Grid>
