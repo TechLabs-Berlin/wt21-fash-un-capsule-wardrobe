@@ -9,11 +9,9 @@ import {
   Tabs,
   Tab,
   useMediaQuery,
-  useTheme,
-  Container,
+  useTheme
 } from "@mui/material";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
-import { Drawer } from "@mui/material";
 import DrawerComponent from "./DrawerComponent";
 
 const Header = () => {
