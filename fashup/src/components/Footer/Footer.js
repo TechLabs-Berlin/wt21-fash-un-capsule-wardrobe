@@ -22,7 +22,7 @@ const Footer = () => {
         >
           {!isMatch && 
             <Box component="div">
-              <img src={logo} alt="logo footer" style={{ width: "120px", height: "auto" }} />
+              <Link href="#"><img src={logo} alt="logo footer" style={{ width: "100px", height: "auto" }} /></Link>
             </Box> 
           }
           
@@ -53,8 +53,8 @@ const Footer = () => {
 
           {!isMatch && 
             <Box component="div" sx={{ mr: "25px" }}>
-              <TwitterIcon fontSize="large" sx={{ mr: "10px" }}/>
-              <FacebookIcon fontSize="large" sx={{ mr: "10px" }}/>
+              <TwitterIcon fontSize="large"  sx={{ mr: "10px" }}/>
+              <FacebookIcon fontSize="large"  sx={{ mr: "10px" }}/>
               <InstagramIcon fontSize="large" />
             </Box>
           }

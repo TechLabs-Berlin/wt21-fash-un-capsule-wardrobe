@@ -14,12 +14,14 @@ import {
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import DrawerComponent from "./DrawerComponent";
 
+const Pages = ["About Us", "Our API", "Documentation", "Help"];
+
 const Header = () => {
   const [value, setValue] = useState(0);
   const theme = useTheme();
   // console.log(theme)
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  // console.log(isMatch);
+  
 
   return (
     <AppBar elevation={0} position="sticky">
@@ -56,10 +58,18 @@ const Header = () => {
                 onChange={(e, value) => setValue(value)}
                 indicatorColor="primary"
               >
-                <Tab label="About Us" />
+                {
+                  Pages.map((page, index) => (
+                    <Tab key={index} label={page} />
+                  ))
+
+                }
+
+                {/* replaced by pages.map method above */}
+                {/* <Tab label="About Us" />
                 <Tab label="Our API" />
                 <Tab label="Documentation" />
-                <Tab label="Help" />
+                <Tab label="Help" /> */}
               </Tabs>
               <Button
                 variant="outlined"
