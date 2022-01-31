@@ -37,7 +37,7 @@ const Header = () => {
                 color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto" }}
+                sx={{ marginLeft: "auto", border: "1px solid #007B7B", color: "#007B7B", "&:hover": { color: "#007B7B", border: "1px solid #007B7B"} }}
               >
                 Sign Up
               </Button>
@@ -63,10 +63,10 @@ const Header = () => {
               </Tabs>
               <Button
                 variant="outlined"
-                color="primary"
+                // color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto" }}
+                sx={{ marginLeft: "auto", border: "1px solid #007B7B", color: "#007B7B", "&:hover": { color: "#007B7B", border: "1px solid #007B7B"}  }}
               >
                 Sign Up
               </Button>
