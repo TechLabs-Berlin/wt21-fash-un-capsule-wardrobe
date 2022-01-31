@@ -7,7 +7,7 @@ import ImageList from "./ImageList";
 import { createTheme } from "@mui/material/styles";
 import { useImageUpload } from "./SearchWindow/useImageUpload";
 import MainHowTo from "./HowTo/MainHowTo";
-import Footer from "./Footer/Footer"
+import Footer from "./Footer/Footer";
 
 const theme = createTheme({
   palette: {
@@ -35,28 +35,33 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-        <Container
-          maxWidth="xl"
-          disableGutters
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            mt: "10px",
-          }}
-        >
-          
-          <Header />
-          <SearchWindow
-            handleImageUpload={handleImageUpload}
-            dataAvailable={dataAvailable}
-            vintedUsername={vintedUsername}
-            imagePaths={imagePaths}
-          />
-          <ImageList imagePaths={imagePaths} />
+      <Container
+        maxWidth="xl"
+        // disableGutters
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          mt: "10px",
+        }}
+      >
+        <Header />
+
+        <SearchWindow
+          handleImageUpload={handleImageUpload}
+          dataAvailable={dataAvailable}
+          vintedUsername={vintedUsername}
+          imagePaths={imagePaths}
+        />
+
+        {!dataAvailable ? (
           <MainHowTo />
-          <Footer />
-        </Container>
+        ) : (
+          <ImageList imagePaths={imagePaths} dataAvailable={dataAvailable} />
+        )}
+
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 }
