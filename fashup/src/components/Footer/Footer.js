@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Link, useMediaQuery, useTheme } from "@mui/material";
-import logo from "./LogoFooter.png";
+import logo from "./logo_small.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
