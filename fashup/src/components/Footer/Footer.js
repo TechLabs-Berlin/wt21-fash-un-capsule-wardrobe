@@ -53,9 +53,9 @@ const Footer = () => {
 
           {!isMatch && 
             <Box component="div" sx={{ mr: "25px" }}>
-              <TwitterIcon sx={{ mr: "10px" }}/>
-              <FacebookIcon sx={{ mr: "10px" }}/>
-              <InstagramIcon />
+              <TwitterIcon fontSize="large" sx={{ mr: "10px" }}/>
+              <FacebookIcon fontSize="large" sx={{ mr: "10px" }}/>
+              <InstagramIcon fontSize="large" />
             </Box>
           }
 
