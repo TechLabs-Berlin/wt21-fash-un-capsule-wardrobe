@@ -37,7 +37,6 @@ const DrawerComponent = () => {
             <MenuIcon />
         </IconButton>
     </React.Fragment>
-    
     );
 };
 
