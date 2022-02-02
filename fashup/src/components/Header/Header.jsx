@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import logo from "./300x300.png";
+import logo from "./logo_small.png";
 import {
   Button,
   Container,
@@ -9,19 +9,18 @@ import {
   Tabs,
   Tab,
   useMediaQuery,
-  useTheme,
+  useTheme
 } from "@mui/material";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
-import { Drawer } from "@mui/material";
 import DrawerComponent from "./DrawerComponent";
 
+const Pages = ["About Us", "Our API", "Documentation", "Help"];
 const Header = ({ onLinkClick }) => {
   const [value, setValue] = useState("home");
   const theme = useTheme();
   // console.log(theme)
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   // console.log(isMatch);
-  console.log(value);
 
   // useEffect(() => {
   //   onLinkClick(value);
@@ -43,7 +42,7 @@ const Header = ({ onLinkClick }) => {
                 color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto" }}
+                sx={{ marginLeft: "auto", border: "1px solid #007B7B", color: "#007B7B", "&:hover": { color: "#007B7B", border: "1px solid #007B7B"} }}
               >
                 Sign Up
               </Button>
@@ -65,18 +64,19 @@ const Header = ({ onLinkClick }) => {
                 }}
                 indicatorColor="primary"
               >
-                <Tab label="Home" value="home" />
-                <Tab label="About Us" value="about" />
-                <Tab label="Our API" value="api" />
-                <Tab label="Documentation" value="docs" />
-                <Tab label="Help" value="help" />
+                {
+                  Pages.map((page, index) => (
+                    <Tab key={index} label={page} />
+                  ))
+
+                }
               </Tabs>
               <Button
                 variant="outlined"
-                color="primary"
+                // color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto" }}
+                sx={{ marginLeft: "auto", border: "1px solid #007B7B", color: "#007B7B", "&:hover": { color: "#007B7B", border: "1px solid #007B7B"}  }}
               >
                 Sign Up
               </Button>
