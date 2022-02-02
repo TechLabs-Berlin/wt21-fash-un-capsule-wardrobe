@@ -27,7 +27,7 @@ const Header = ({ onLinkClick }) => {
   const theme = useTheme();
   // console.log(theme)
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  // console.log(isMatch);
+  console.log(isMatch);
 
   // useEffect(() => {
   //   onLinkClick(value);
