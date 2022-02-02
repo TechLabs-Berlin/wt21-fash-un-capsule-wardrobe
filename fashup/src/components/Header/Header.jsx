@@ -14,14 +14,14 @@ import {
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import DrawerComponent from "./DrawerComponent";
 
-const Pages = [
-  { label: "Home", value: "home" },
-  { label: "About Us", value: "about" },
-  { label: "Our API", value: "api" },
-  { label: "Documentation", value: "docs" },
-  { label: "Help", value: "help" },
-];
-console.log(Pages);
+// const Pages = [
+//   { label: "Home", value: "home" },
+//   { label: "About Us", value: "about" },
+//   { label: "Our API", value: "api" },
+//   { label: "Documentation", value: "docs" },
+//   { label: "Help", value: "help" },
+// ];
+
 const Header = ({ onLinkClick }) => {
   const [value, setValue] = useState("home");
   const theme = useTheme();
@@ -76,9 +76,11 @@ const Header = ({ onLinkClick }) => {
                 }}
                 indicatorColor="primary"
               >
-                {Pages.map((label, value) => (
-                  <Tab label={label} value={value} />
-                ))}
+                <Tab label="Home" value="home" />
+                <Tab label="About Us" value="about" />
+                <Tab label="Our API" value="api" />
+                <Tab label="Documentation" value="docs" />
+                <Tab label="Help" value="help" />
               </Tabs>
               <Button
                 variant="outlined"
