@@ -9,12 +9,19 @@ import {
   Tabs,
   Tab,
   useMediaQuery,
-  useTheme
+  useTheme,
 } from "@mui/material";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import DrawerComponent from "./DrawerComponent";
 
-const Pages = ["About Us", "Our API", "Documentation", "Help"];
+const Pages = [
+  { label: "Home", value: "home" },
+  { label: "About Us", value: "about" },
+  { label: "Our API", value: "api" },
+  { label: "Documentation", value: "docs" },
+  { label: "Help", value: "help" },
+];
+console.log(Pages);
 const Header = ({ onLinkClick }) => {
   const [value, setValue] = useState("home");
   const theme = useTheme();
@@ -42,7 +49,12 @@ const Header = ({ onLinkClick }) => {
                 color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto", border: "1px solid #007B7B", color: "#007B7B", "&:hover": { color: "#007B7B", border: "1px solid #007B7B"} }}
+                sx={{
+                  marginLeft: "auto",
+                  border: "1px solid #007B7B",
+                  color: "#007B7B",
+                  "&:hover": { color: "#007B7B", border: "1px solid #007B7B" },
+                }}
               >
                 Sign Up
               </Button>
@@ -64,19 +76,21 @@ const Header = ({ onLinkClick }) => {
                 }}
                 indicatorColor="primary"
               >
-                {
-                  Pages.map((page, index) => (
-                    <Tab key={index} label={page} />
-                  ))
-
-                }
+                {Pages.map((label, value) => (
+                  <Tab label={label} value={value} />
+                ))}
               </Tabs>
               <Button
                 variant="outlined"
                 // color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
-                sx={{ marginLeft: "auto", border: "1px solid #007B7B", color: "#007B7B", "&:hover": { color: "#007B7B", border: "1px solid #007B7B"}  }}
+                sx={{
+                  marginLeft: "auto",
+                  border: "1px solid #007B7B",
+                  color: "#007B7B",
+                  "&:hover": { color: "#007B7B", border: "1px solid #007B7B" },
+                }}
               >
                 Sign Up
               </Button>
