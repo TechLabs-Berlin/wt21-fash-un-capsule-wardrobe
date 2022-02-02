@@ -79,6 +79,7 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
           variant="contained"
           size="medium"
           color="primary"
+          disabled={!isUploaded ? true : false}
           onClick={() => {
             handleImageUpload(image);
           }}

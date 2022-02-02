@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import logo from "./300x300.png";
 import {
@@ -15,12 +15,17 @@ import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import { Drawer } from "@mui/material";
 import DrawerComponent from "./DrawerComponent";
 
-const Header = () => {
-  const [value, setValue] = useState(0);
+const Header = ({ onLinkClick }) => {
+  const [value, setValue] = useState("home");
   const theme = useTheme();
   // console.log(theme)
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   // console.log(isMatch);
+  console.log(value);
+
+  // useEffect(() => {
+  //   onLinkClick(value);
+  // }, [value]);
 
   return (
     <AppBar elevation={0} position="sticky">
@@ -54,13 +59,17 @@ const Header = () => {
               <Tabs
                 sx={{ marginLeft: "auto" }}
                 value={value}
-                onChange={(e, value) => setValue(value)}
+                onChange={(e, value) => {
+                  setValue(value);
+                  onLinkClick(value);
+                }}
                 indicatorColor="primary"
               >
-                <Tab label="About Us" />
-                <Tab label="Our API" />
-                <Tab label="Documentation" />
-                <Tab label="Help" />
+                <Tab label="Home" value="home" />
+                <Tab label="About Us" value="about" />
+                <Tab label="Our API" value="api" />
+                <Tab label="Documentation" value="docs" />
+                <Tab label="Help" value="help" />
               </Tabs>
               <Button
                 variant="outlined"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, CssBaseline, ThemeProvider } from "@mui/material";
 
 import SearchWindow from "./SearchWindow/SearchWindow";
@@ -8,6 +8,10 @@ import { createTheme } from "@mui/material/styles";
 import { useImageUpload } from "./SearchWindow/useImageUpload";
 import MainHowTo from "./HowTo/MainHowTo";
 import Footer from "./Footer/Footer";
+import Documentation from "./Documentation";
+import Api from "./API";
+import AboutUs from "./AboutUs";
+import Help from "./Help";
 
 const theme = createTheme({
   palette: {
@@ -32,9 +36,62 @@ function App() {
     errorMassage,
   } = useImageUpload({ apiURL: "http://localhost:5000/api/process-image" });
 
+  const [linkIndex, setLinkIndex] = useState(0);
+  console.log("linkIndex", linkIndex);
+
+  const renderSwitch = (index) => {
+    switch (index) {
+      case "docs":
+        return (
+          <div>
+            <Documentation />
+          </div>
+        );
+      case "api":
+        return (
+          <div>
+            <Api />
+          </div>
+        );
+      case "about":
+        return (
+          <div>
+            <AboutUs />
+          </div>
+        );
+      case "help":
+        return (
+          <div>
+            <Help />
+          </div>
+        );
+      default:
+        return (
+          <div>
+            <SearchWindow
+              handleImageUpload={handleImageUpload}
+              dataAvailable={dataAvailable}
+              vintedUsername={vintedUsername}
+              imagePaths={imagePaths}
+            />
+
+            {dataAvailable ? (
+              <ImageList
+                imagePaths={imagePaths}
+                dataAvailable={dataAvailable}
+              />
+            ) : (
+              <MainHowTo />
+            )}
+          </div>
+        );
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+
       <Container
         maxWidth="xl"
         // disableGutters
@@ -45,20 +102,9 @@ function App() {
           mt: "10px",
         }}
       >
-        <Header />
+        <Header onLinkClick={(v) => setLinkIndex(v)} />
 
-        <SearchWindow
-          handleImageUpload={handleImageUpload}
-          dataAvailable={dataAvailable}
-          vintedUsername={vintedUsername}
-          imagePaths={imagePaths}
-        />
-
-        {!dataAvailable ? (
-          <MainHowTo />
-        ) : (
-          <ImageList imagePaths={imagePaths} dataAvailable={dataAvailable} />
-        )}
+        {renderSwitch(linkIndex)}
 
         <Footer />
       </Container>
