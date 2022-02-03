@@ -22,21 +22,16 @@ import DrawerComponent from "./DrawerComponent";
 //   { label: "Help", value: "help" },
 // ];
 
-const Header = ({ onLinkClick }) => {
+const Header = ({ onLinkClick, resetData }) => {
   const [value, setValue] = useState("home");
   const theme = useTheme();
   // console.log(theme)
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  console.log(isMatch);
+  // console.log(isMatch);
 
   // useEffect(() => {
   //   onLinkClick(value);
   // }, [value]);
-
-  // const tabs = Pages.map((label, value) => {
-  //   console.log(label, value);
-  //   <Tab label={label} value={value} />;
-  // });
 
   return (
     <AppBar elevation={0} position="sticky">
@@ -78,6 +73,9 @@ const Header = ({ onLinkClick }) => {
                 onChange={(e, value) => {
                   setValue(value);
                   onLinkClick(value);
+                }}
+                onClick={() => {
+                  resetData();
                 }}
                 indicatorColor="primary"
               >
