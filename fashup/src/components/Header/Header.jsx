@@ -33,6 +33,11 @@ const Header = ({ onLinkClick }) => {
   //   onLinkClick(value);
   // }, [value]);
 
+  // const tabs = Pages.map((label, value) => {
+  //   console.log(label, value);
+  //   <Tab label={label} value={value} />;
+  // });
+
   return (
     <AppBar elevation={0} position="sticky">
       <Container disableGutters maxWidth="xl">
