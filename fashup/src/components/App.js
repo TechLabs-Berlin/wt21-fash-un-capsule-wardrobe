@@ -27,6 +27,7 @@ const theme = createTheme({
 function App() {
   const {
     handleImageUpload,
+    resetData,
     dataAvailable,
     imagePaths,
     price,
@@ -102,7 +103,7 @@ function App() {
           mt: "10px",
         }}
       >
-        <Header onLinkClick={(v) => setLinkIndex(v)} />
+        <Header onLinkClick={(v) => setLinkIndex(v)} resetData={resetData} />
 
         {renderSwitch(linkIndex)}
 

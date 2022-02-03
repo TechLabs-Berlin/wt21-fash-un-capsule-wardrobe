@@ -30,7 +30,12 @@ export const useImageUpload = ({ apiURL }) => {
     setDataAvailable(true);
   };
 
+  const resetData = () => {
+    setDataAvailable(false);
+  };
+
   return {
+    resetData,
     handleImageUpload,
     dataAvailable,
     imagePaths,
