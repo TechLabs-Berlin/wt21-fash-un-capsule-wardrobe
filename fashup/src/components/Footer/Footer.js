@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Link, useMediaQuery, useTheme } from "@mui/material";
-import logo from "./LogoFooter.png";
+import logo from "./logo_small.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -22,7 +22,7 @@ const Footer = () => {
         >
           {!isMatch && 
             <Box component="div">
-              <img src={logo} alt="logo footer" style={{ width: "120px", height: "auto" }} />
+              <Link href="#"><img src={logo} alt="logo footer" style={{ width: "100px", height: "auto" }} /></Link>
             </Box> 
           }
           
@@ -53,9 +53,9 @@ const Footer = () => {
 
           {!isMatch && 
             <Box component="div" sx={{ mr: "25px" }}>
-              <TwitterIcon />
-              <FacebookIcon />
-              <InstagramIcon />
+              <TwitterIcon fontSize="large"  sx={{ mr: "10px" }}/>
+              <FacebookIcon fontSize="large"  sx={{ mr: "10px" }}/>
+              <InstagramIcon fontSize="large" />
             </Box>
           }
 
