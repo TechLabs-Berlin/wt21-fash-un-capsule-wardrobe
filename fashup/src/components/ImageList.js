@@ -118,7 +118,7 @@ export default function SearchResults({ imagePaths }) {
                       color="green"
                       fontWeight="bold"
                     >
-                      {item.price}
+                      ${item.price}
                     </Typography>
                   </Grid>
                 </Grid>
