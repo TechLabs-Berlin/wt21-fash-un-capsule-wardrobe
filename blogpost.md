@@ -45,19 +45,28 @@ The most interesting finding of our online survey was that our target group valu
 
 Based on our research we created two user Stories, which describes our average user.
 
-![User Stories](Images/User_Stories.png)
+
+<p align="center">
+    <img alt="user stories" src="Images/User_Stories.png" width="800" />
+</p>
+
 
 **Wireframe and User Flow**
 
 We began with hand-drawn primitive wireframing and another layout to give the WD team a basic notion of how the website would appear, simply to give them a general idea. This allowed them to work on their coding and set up their own structure.
 
-![alt text](Images/Wireframe_1.JPG)
-![alt text](Images/Sketch_3.jpg)
+<p align="center">
+    <img alt="wireframe 1" src="Images/Wireframe_1.JPG" width="400" />
+    <img alt="wireframe 2" src="Images/Wireframe_2.JPG" width="400" />
+</p>
 
 While the WD Team began exploring the programming required for the website project based on the wireframe, UX began working on additional details such as design, user flow and application possibilities.
 
-![Wireframe_1](Images/Sketch_1.jpg)
-![Wireframe_2](Images/Sketch_2.jpg)
+<p align="center">
+    <img alt="Sketch_1" src="Images/Sketch_1.jpg" width="400" />
+    <img alt="Sketch_2" src="Images/Sketch_2.jpg" width="400" />
+</p>
+
 
 **Logo**
 
