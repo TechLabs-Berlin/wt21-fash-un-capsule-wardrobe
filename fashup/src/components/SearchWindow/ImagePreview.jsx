@@ -1,46 +1,49 @@
 import React, { useState } from "react";
+import axios from "axios";
 import FolderIcon from "./folder_icon_transparent.png";
+import PlaceholderIcon from "./placeholder.svg";
 import CloseIcon from "./close-icon.svg";
-import { Container, Box } from "@mui/material";
+import { Grid, Container, Box, Button } from "@mui/material";
 import "./ImagePreview.css";
 
-function ImagePreview() {
-  const [image, setImage] = useState("");
+const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
+  const [image, setImage] = useState(null);
   const [isUploaded, setIsUploaded] = useState(false);
-  const [typeFile, setTypeFile] = useState("");
+  const [imagePreview, setImagePreview] = useState("");
 
-  function handleImageChange(e) {
+  const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setTypeFile(e.target.files[0].type);
       let reader = new FileReader();
+      setImage(e.target.files[0]);
 
       reader.onload = function (e) {
-        setImage(e.target.result);
+        setImagePreview(e.target.result);
         setIsUploaded(true);
       };
 
       reader.readAsDataURL(e.target.files[0]);
     }
-  }
+  };
 
   return (
-    <Container
+    <Grid
+      container
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h2>Upload your image</h2>
-
-      <Box className="BoxUpload">
-        <div className="image-upload">
+      <Grid item className="BoxUpload">
+        <Box className="image-upload">
           {!isUploaded ? (
             <>
               <label htmlFor="upload-input">
                 <img
-                  src={FolderIcon}
+                  src={PlaceholderIcon}
                   draggable={"false"}
                   alt="placeholder"
-                  style={{ width: 100, height: 100 }}
+                  style={{ width: "auto", height: "auto", paddingTop: "10px" }}
                 />
-                <p style={{ color: "#444" }}>Click to upload image</p>
+                <p style={{ color: "#444", textAlign: "center" }}>
+                  Click to upload image
+                </p>
               </label>
 
               <input
@@ -63,16 +66,29 @@ function ImagePreview() {
               />
               <img
                 id="uploaded-image"
-                src={image}
+                src={imagePreview}
                 draggable={false}
                 alt="uploaded-img"
               />
             </Box>
           )}
-        </div>
-      </Box>
-    </Container>
+        </Box>
+      </Grid>
+      <Grid item sx={{ marginTop: "20px" }}>
+        <Button
+          variant="contained"
+          size="medium"
+          color="primary"
+          disabled={!isUploaded ? true : false}
+          onClick={() => {
+            handleImageUpload(image);
+          }}
+        >
+          Search
+        </Button>
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export default ImagePreview;
