@@ -75,9 +75,9 @@ For installation, please follow the instructions below.
   npm start
   ```
 ### AI Model
-4. Install all dependecies via the Requirements.txt file + be sure to run your environment on Python 3.9 or below: Navigate to requirements.txt root and run the following command:<br>
+4. Install all dependecies via the Requirements.txt file + be sure to run your environment on Python 3.9 or below: Navigate to Requirements.txt root and run the following command:<br>
 ```
-pip install -r requirements.txt
+pip install -r Requirements.txt
 ```
 5. Open the app.py file and replace the following paths with your own paths:<br>
 - database_path = own_path
