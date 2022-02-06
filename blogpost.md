@@ -101,28 +101,29 @@ Without a design template from the user experience (UX) team, there didn't seem 
 
 In addition to the classic areas of a website such as header, main and footer, we had to identify and program functionalities to be ready to work early without a concrete design prototype. Based on the idea of what our Minimum Viable Product (MVP) functionality could be, we derived the necessary components for the web app to be programmed. In the process, we simultaneously dived into the React component library MUI. Here is an example of our first attempts. For our MVP, for example, the user had to be able to upload a photo and send it to the AI model. To do this, we started by programming a simple input field with a button. At this point, we assumed that we needed a search field where the user enters a URL.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of text input field!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![first draft input](Images/input_field.png)
+![second draft input](Images/first_draft.png)
 
 Besides a search function, we knew that the results from the AI model should also be displayed in the frontend. Without design sketches, we programmed pure functionalities without styling. For example, we added an image list, which should display the user query and the subsequent response of the AI model with suggestions in a result list as output in the frontend.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of unsplash image list!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![imageList_1](Images/imageList_1.png)
 
 After the first design drafts came from UX, we continued programming the website and adding the designs accordingly. The design of the website has continuously evolved and we as developers had to react quickly and flexibly and adjust everything accordingly.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of first colored design with image list!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![imageList_2](Images/imageList_2.png)
+![imageList_3](Images/imageList_3.png)
 
 It was only two weeks before the end of the project that we found out that we were not using a search field that sends a URL to the AI model. Instead, we had to include a file upload functionality where the user picks a photo from his computer and gets a preview of the provided file. This requirement posed a challenge to us as prospective developers, as we had not learned anything in this direction before. First we decided to try a popular drag and drop solution for MUI, that comes from a third party and is known as Dropzone. However, we were not satisfied with Dropzone's solution. Through thorough research and learning-by-doing, we developed a simpler solution that also works on mobile devices by clicking on the upload area and choosing a file through the explorer window. In the meantime, we had also made the website responsive for mobile devices.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of responsive layout!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![responsive_1](Images/responsive_1.png)
+![responsive_2](Images/responsive_2.png)
+![responsive_3](Images/responsive_3.png)
 
 For testing purposes, we had rebuilt a backend server in our development environment in a very simple form and tried to connect it to the frontend. This was working very well in our simplified test run. However, the connection of the FE to the BE of the AI team was more difficult. In the BE itself, there were request errors that the AI team had to overcome in order to accept and process the data coming from the FE. On the other hand, AI had to make sure to provide the results of their model in a way that it was compatible with the frontend. For example, when transferring data from the BE to the FE, the data had to be passed in a JSON format so that we could extract the necessary information in the FE using a mapping function and allocating the data to its correct position in our Image List. However, due to syntax errors, this did not work smoothly and we had some struggle to find a working solution and to adjust the code accordingly. These are just a few examples of the challenges we overcame together as a team with WD and AI. The result is a working user query and the display of the AI model results in the FE.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of results from connected backend!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![result_AI](Images/result_AI.png)
 
 **Cross Functional Teamwork with UX and AI**
 
@@ -134,8 +135,8 @@ There was a constant flow of information between the WD and AI team and we discu
 
 From a technological-AI perspective, the ultimate project goal meant to solve a similarity recommendation problem, which should function in the following way:
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of AI model concept!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![concept_AI](Images/concept_AI.png)
 
 For building such MVP functionality, the AI team divided the problem into the following three steps:
 
