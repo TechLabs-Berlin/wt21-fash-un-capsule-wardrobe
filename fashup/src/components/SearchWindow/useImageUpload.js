@@ -19,32 +19,15 @@ export const useImageUpload = ({ apiURL }) => {
     const formData = new FormData();
     formData.append("imagefile", file);
 
-    //send the file to the server
-    try {
-      const {
-        data: { imagePaths, price, vintedURL, vintedUsername },
-      } = await axios.post(apiURL, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+    const response = await axios.post(apiURL, formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
 
-      //set the data to state
-      setPrice(price);
-      setImagePaths(imagePaths);
-      setVintedURL(vintedURL);
-      setVintedUsername(vintedUsername);
-      setIsLoading(false);
-      setDataAvailable(true);
-    } catch ({ message }) {
-      setErrorMassage(message);
-      setPrice(0);
-      setImagePaths([]);
-      setVintedURL("");
-      setVintedUsername("");
-      setIsLoading(false);
-      setDataAvailable(false);
-    }
+    setImagePaths(response.data);
+    console.log(response.data);
+    console.log(imagePaths);
+
+    setDataAvailable(true);
   };
 
   return {
