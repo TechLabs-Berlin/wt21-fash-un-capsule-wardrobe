@@ -5,9 +5,9 @@ import docImg from "./docs.jpg";
 function Documentation() {
   return (
     <Container
-      maxWidth="100%"
+      maxWidth="xl"
       disableGutters
-      sx={{ display: "flex", flexDirection: "row", my: "50px", px: "0" }}
+      sx={{ display: "flex", flexDirection: "row", my: "50px", px: "50px" }}
     >
       <Grid container pr={"20px"}>
         <Box>
@@ -33,20 +33,20 @@ function Documentation() {
           What is Fashup?
         </Grid>
         <Grid item md={8} sx={{ mb: "15px" }}>
-          Fashup is an service that provide the user the flexibility and time
-          saving by providing 1 to 1 search result. THe user need to provide us
+          Fashup is a service that provides the user the flexibility and time
+          saving by providing 1 to 1 search result. The user needs to provide us
           the picture (.jpg,.png) of the items that they want to search for, we
           will process the picture and return the search result to the user in
-          form of the direct link of the similar looking items we found in
-          Vinted
+          form of the direct link of the similar looking items we found on
+          Vinted.com.
         </Grid>
         <Grid item md={4} sx={{ color: "#007B7B", fontWeight: "bold" }}>
           How our things work?
         </Grid>
         <Grid item md={8} sx={{ mb: "15px" }}>
-          The algorithm works by Training the model with the large quantity of
-          items image from Vinted datbase to identified similar items return us
-          a result. Further research on this topic can be found{" "}
+          The algorithm works by training the model with a large quantity of
+          items images from the Vinted.com datbase to identify similar items and
+          return a result. Further research on this topic can be found{" "}
           <a
             target="blank"
             href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Liu_DeepFashion_Powering_Robust_CVPR_2016_paper.pdf"
@@ -59,24 +59,21 @@ function Documentation() {
           Our Team
         </Grid>
         <Grid item xs={12} sm={12} md={8}>
-          <Typography sx={{ fontWeight: "bold" }}>WD Team</Typography>
-          <Typography sx={{ mb: "15px" }}>
-            Cem *(Alf Alfonso)
-            <br />
-            Roman Wiegel
-          </Typography>
           <Typography sx={{ fontWeight: "bold" }}>AI Team </Typography>
           <Typography sx={{ mb: "15px" }}>
-            Fabian
+            Fabian Barulli
             <br />
             Lukas Bauerschmidt
           </Typography>
-          <Typography sx={{ fontWeight: "bold" }}>UX team </Typography>
+          <Typography sx={{ fontWeight: "bold" }}>WD Team</Typography>
           <Typography sx={{ mb: "15px" }}>
-            Kolawole Oguntil
+            Cem Akbulut
             <br />
-            Sira Cha
+            Roman Wiegel
           </Typography>
+
+          <Typography sx={{ fontWeight: "bold" }}>UX team </Typography>
+          <Typography sx={{ mb: "15px" }}>Siraprapa Chalermphao</Typography>
           <Typography sx={{ fontWeight: "bold" }}>Mentor</Typography>
           <Typography>Bogdan Ciobotaru</Typography>
         </Grid>

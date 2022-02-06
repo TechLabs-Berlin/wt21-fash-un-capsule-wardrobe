@@ -5,13 +5,13 @@ import helpImg from "./help.jpg";
 function Help() {
   return (
     <Container
-      maxWidth="100%"
+      maxWidth="xl"
       disableGutters
       sx={{
         display: "flex",
         flexDirection: "row",
         my: "50px",
-        px: "0",
+        px: "50px",
       }}
     >
       <Grid container pr={"20px"}>

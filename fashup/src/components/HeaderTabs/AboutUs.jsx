@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Grid, Box, Typography } from "@mui/material/";
+import { Container, Grid, Box } from "@mui/material/";
 import aboutImg from "./about.jpg";
 
 function AboutUs() {
   return (
     <Container
-      maxWidth="100%"
+      maxWidth="xl"
       disableGutters
-      sx={{ display: "flex", flexDirection: "row", my: "50px", px: "0" }}
+      sx={{ display: "flex", flexDirection: "row", my: "50px", px: "50px" }}
     >
       <Grid container pr={"20px"}>
         <Box>
@@ -34,21 +34,27 @@ function AboutUs() {
           What is Fashup
         </Grid>
         <Grid item md={9} sx={{ mb: "15px" }}>
-          Fashup is born from a group of talented individual, who shared their
-          ideas and express their creativity through vintage fashion and cared
-          about sustainability and their pocket alike. We put an efford to
-          create a joined place for you to browse the alternatives choices of
+          Fashup is born from a group of talented individuals, who shared their
+          ideas and expressed their creativity through vintage fashion and cared
+          about sustainability and their pocket alike. We put an effort to
+          create a joined place for you to browse the alternative choices of
           items without much of a hassle or need of luck to find the favourite
-          piece of items. We valued our ideology and our world and glad to put
-          our little part to this circular economy where everyone benefited from
-          the effort.We want you to enjoy buying and enjoy your new piece, just
-          that it doesnt need to harm the earth or your pocket in the way.
+          piece. We value our ideology and our world and we're glad to put our
+          little part to this circular economy where everyone benefits from the
+          effort. We want you to enjoy buying and enjoy your new piece, just
+          that it doesn't need to harm the earth or your pocket in the way.
         </Grid>
         <Grid item md={3} sx={{ color: "#007B7B", fontWeight: "bold" }}>
           Contact us
         </Grid>
         <Grid item md={9} sx={{ mb: "15px" }}>
-          FASHUP, Lutzgasse 67c, Neumünster, Berlin, 10418, GERMANY
+          FASHUP
+          <br />
+          Lutzgasse 67c
+          <br />
+          Berlin, 10418
+          <br />
+          GERMANY
           <br />
           Tel. 00548 81314
           <br />

@@ -1,12 +1,11 @@
 .BoxUpload {
-  display: grid;
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
   place-items: center;
-  border: 1px dashed #799cd9;
-  /* padding: 36px 48px; */
   position: relative;
-  height: auto;
-  width: auto;
+  height: 250px;
+  width: 250px;
   background: #fbfbff;
   border-radius: 20px;
 }
