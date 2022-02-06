@@ -8,34 +8,25 @@ import { createTheme } from "@mui/material/styles";
 import { useImageUpload } from "./SearchWindow/useImageUpload";
 import MainHowTo from "./HowTo/MainHowTo";
 import Footer from "./Footer/Footer";
-import Documentation from "./Documentation";
-import Api from "./API";
-import AboutUs from "./AboutUs";
-import Help from "./Help";
+import Documentation from "./HeaderTabs/Documentation";
+import Api from "./HeaderTabs/API";
+import AboutUs from "./HeaderTabs/AboutUs";
+import Help from "./HeaderTabs/Help";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#88d2e3",
+      main: "#BFEEED",
     },
     secondary: {
-      main: "#a3a7a8",
+      main: "#007B7B",
     },
   },
 });
 
 function App() {
-  const {
-    handleImageUpload,
-    resetData,
-    dataAvailable,
-    imagePaths,
-    price,
-    vintedURL,
-    vintedUsername,
-    isLoading,
-    errorMassage,
-  } = useImageUpload({ apiURL: "http://localhost:5000/api/process-image" });
+  const { handleImageUpload, resetData, dataAvailable, results } =
+    useImageUpload({ apiURL: "http://localhost:5000/api/process-image" });
 
   const [linkIndex, setLinkIndex] = useState(0);
   console.log("linkIndex", linkIndex);
@@ -72,15 +63,11 @@ function App() {
             <SearchWindow
               handleImageUpload={handleImageUpload}
               dataAvailable={dataAvailable}
-              vintedUsername={vintedUsername}
-              imagePaths={imagePaths}
+              results={results}
             />
 
             {dataAvailable ? (
-              <ImageList
-                imagePaths={imagePaths}
-                dataAvailable={dataAvailable}
-              />
+              <ImageList results={results} dataAvailable={dataAvailable} />
             ) : (
               <MainHowTo />
             )}
@@ -94,13 +81,13 @@ function App() {
       <CssBaseline />
 
       <Container
-        maxWidth="xl"
-        // disableGutters
-        style={{
+        maxWidth="100%"
+        disableGutters
+        sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-evenly",
-          mt: "10px",
+          height: "100%",
         }}
       >
         <Header onLinkClick={(v) => setLinkIndex(v)} resetData={resetData} />

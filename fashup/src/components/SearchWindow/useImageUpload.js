@@ -2,13 +2,10 @@ import axios from "axios";
 import { useState } from "react";
 
 export const useImageUpload = ({ apiURL }) => {
-  const [imagePaths, setImagePaths] = useState([]);
-  const [price, setPrice] = useState(0);
-  const [vintedURL, setVintedURL] = useState("");
-  const [vintedUsername, setVintedUsername] = useState("");
+  const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMassage, setErrorMassage] = useState("");
-  const [dataAvailable, setDataAvailable] = useState(false); // wurden Daten abgerufen? sollen dem user eine Rückmeldung angezeigt werden?
+  const [dataAvailable, setDataAvailable] = useState(false);
 
   const handleImageUpload = async (file) => {
     //prepare request / set loading / remove previous error message
@@ -23,9 +20,9 @@ export const useImageUpload = ({ apiURL }) => {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
-    setImagePaths(response.data);
+    setResults(response.data);
     console.log(response.data);
-    console.log(imagePaths);
+    console.log(results);
 
     setDataAvailable(true);
   };
@@ -38,10 +35,7 @@ export const useImageUpload = ({ apiURL }) => {
     resetData,
     handleImageUpload,
     dataAvailable,
-    imagePaths,
-    price,
-    vintedURL,
-    vintedUsername,
+    results,
     isLoading,
     errorMassage,
   };
