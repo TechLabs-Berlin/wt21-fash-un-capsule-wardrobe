@@ -161,7 +161,7 @@ Since the user picture will be provided by the end user itself (via the frontend
 
 During our search for a suitable AI model that is capable of labeling pictures with vectors, we came across the [DocArray library](https://github.com/jina-ai/docarray), which allows deep-learning engineers to efficiently process, embed, search, recommend, store, and transfer the data with a Pythonic API. The library offers exactly the vector labeling functionality we were searching for. The only variable it requires is the model itself, for which we assumed the Resnet50 to be accurate in the first place (Future Outlook: Resnet50 to be re-trained on DeepFashion database to increase accuracy).
 
-**1. Output**
+**3. Output**
 
 The DocArray library seems also capable of determining similarity between pictures, wherefore no further algorithm research needed to be conducted.
-Finally, putting all chunks together, we successfully received for a given user fashion picture a recommendation of matching comparable fashion items.
+Finally, putting all chunks together, we successfully received a recommendation of matching comparable fashion items for a given user fashion picture.
