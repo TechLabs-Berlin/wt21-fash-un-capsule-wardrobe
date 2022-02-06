@@ -158,7 +158,10 @@ It was only two weeks before the end of the project that we found out that we we
 For testing purposes, we had rebuilt a backend server in our development environment in a very simple form and tried to connect it to the frontend. This was working very well in our simplified test run. However, the connection of the FE to the BE of the AI team was more difficult. In the BE itself, there were request errors that the AI team had to overcome in order to accept and process the data coming from the FE. On the other hand, AI had to make sure to provide the results of their model in a way that it was compatible with the frontend. For example, when transferring data from the BE to the FE, the data had to be passed in a JSON format so that we could extract the necessary information in the FE using a mapping function and allocating the data to its correct position in our Image List. However, due to syntax errors, this did not work smoothly and we had some struggle to find a working solution and to adjust the code accordingly. These are just a few examples of the challenges we overcame together as a team with WD and AI. The result is a working user query and the display of the AI model results in the FE.
 
 
-![result_AI](Images/result_AI.png)
+<p align="center">
+    <img alt="result_AI" src="Images/result_AI.png" width="600" />
+</p>
+
 
 **Cross Functional Teamwork with UX and AI**
 
@@ -171,7 +174,9 @@ There was a constant flow of information between the WD and AI team and we discu
 From a technological-AI perspective, the ultimate project goal meant to solve a similarity recommendation problem, which should function in the following way:
 
 
-![concept_AI](Images/concept_AI.png)
+<p align="center">
+    <img alt="concept" src="Images/concept_AI.png" width="600" />
+</p>
 
 For building such MVP functionality, the AI team divided the problem into the following three steps:
 
