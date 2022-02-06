@@ -175,7 +175,7 @@ From a technological-AI perspective, the ultimate project goal meant to solve a 
 
 
 <p align="center">
-    <img alt="concept" src="Images/concept_AI.png" width="600" />
+    <img alt="concept AI" src="Images/Concept_AI.png" width="600" />
 </p>
 
 For building such MVP functionality, the AI team divided the problem into the following three steps:
