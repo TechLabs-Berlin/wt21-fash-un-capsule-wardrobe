@@ -44,39 +44,38 @@ The most interesting finding of our online survey was that our target group valu
 Based on our research we created two user Stories, which describes our average user.
 
 **!!!!!!!!!!!!!!!!!!!!!!!!Picture of personas!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![User Stories](Images/User_Stories.png)
+
 
 
 **Wireframe and User Flow**
 
 We began with hand-drawn primitive wireframing and another layout to give the WD team a basic notion of how the website would appear, simply to give them a general idea. This allowed them to work on their coding and set up their own structure.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of wireframe!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![alt text](Images/Wireframe_1.JPG)
+![alt text](Images/Sketch_3.jpg)
 
 While the WD Team began exploring the programming required for the website project based on the wireframe, UX began working on additional details such as design, user flow and application possibilities.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of wireframe & user flow sketches!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![Wireframe_1](Images/Sketch_1.jpg)
+[Wireframe_2](Images/Sketch_2.jpg)
 
 **Logo**
 
 The website's little features, such as service names, a logo created with Canva and colour themes from MuzIi colour,  were all determined by team voting.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture of logos & color pallete!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![Logo](Images/Logo_1.png)
+![Logo](Images/Logo_2.png)
 
 **Mockup Prototype**
 
 We created a short mockup prototype using MUI and the Figma Wireframing tool to better visualize the eventual website. This made working with the WD team easier because the mock-up prototype could be used to test the Figma and frontend integration early on. We were working with the WD team to figure out how to extract the CSS code out of Figma and offered the WD access to the files and other information they might need.
 
 **!!!!!!!!!!!!!!!!!!!!!!!!Picture of mockup!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Example of one of the early designs for the prototype.
-
-**!!!!!!!!!!!!!!!!!!!!!!!!Picture early stage prototype!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Mockup_Prototype](Images/Mockup_Prototype_1.png)
 
 **Making of the prototype**
 
@@ -85,17 +84,18 @@ We progressed from creating a wireframe prototype to creating a completely funct
 We began by constructing each constituent in whatever manner that might be useful in our situation. Color, Typography, Icons, Buttons, Checkboxes, Dropdown menu, Tags, Page indicators-Pagination, Input field, Tabs, Toggles, Different types of Forms, Header, Footer, Hero banner, Body banner, User bar, Cards, Progress bar, and others are just a few examples of minor elements.
 
 **!!!!!!!!!!!!!!!!!!!!!!!!Pictures of figma showing the progress in designing the prototype!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Making_Protoype](Images/Making_Prototype_1.png)
 
 Then we started putting things together using all of the elements that were now in our assets. Then we added some spice to it by using plugins like Blush and Unsplash to add some photographs and graphics to our website. One such example can be found in our banner.
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Pictures of "How does it work" section!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![Making_Prototype_How_does_it_work](Images/Making_Prototye_2.png)
 
 **Example pages from prototype: Hero page and additional pages**
 
-**!!!!!!!!!!!!!!!!!!!!!!!!Pictures of Figma screenshots of different web app views!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![Hero_2](Images/Hero_1.png)
+![Hero_2](Images/Hero_2.png)
 
 ### Web Development: Creating the website
 
