@@ -63,8 +63,8 @@ We began with hand-drawn primitive wireframing and another layout to give the WD
 While the WD Team began exploring the programming required for the website project based on the wireframe, UX began working on additional details such as design, user flow and application possibilities.
 
 <p align="center">
-    <img alt="Sketch_1" src="Images/Sketch_1.jpg" width="400" />
     <img alt="Sketch_2" src="Images/Sketch_2.jpg" width="400" />
+    <img alt="Sketch_3" src="Images/Sketch_3.jpg" width="400" />
 </p>
 
 
@@ -72,14 +72,24 @@ While the WD Team began exploring the programming required for the website proje
 
 The website's little features, such as service names, a logo created with Canva and colour themes from MuzIi colour, were all determined by team voting.
 
-![Logo](Images/Logo_1.png)
-![Logo](Images/Logo_2.png)
+<p align="center">
+    <img alt="Logo_1" src="Images/Logo_1.png" width="400" />
+    <img alt="Logo_3" src="Images/logo_3.png" width="400" />
+</p>
+
+<p align="center">
+    <img alt="Logo_2" src="Images/Logo_2.png" width="400" />
+</p>
+
 
 **Mockup Prototype**
 
 We created a short mockup prototype using MUI and the Figma Wireframing tool to better visualize the eventual website. This made working with the WD team easier because the mock-up prototype could be used to test the Figma and frontend integration early on. We were working with the WD team to figure out how to extract the CSS code out of Figma and offered the WD access to the files and other information they might need.
 
-![Mockup_Prototype](Images/Mockup_Prototype_1.png)
+<p align="center">
+    <img alt="Mockup_Prototype_1" src="Images/Mockup_Prototype_1.png" width="400" />
+</p>
+
 
 **Making of the prototype**
 
@@ -87,16 +97,22 @@ We progressed from creating a wireframe prototype to creating a completely funct
 
 We began by constructing each constituent in whatever manner that might be useful in our situation. Color, Typography, Icons, Buttons, Checkboxes, Dropdown menu, Tags, Page indicators-Pagination, Input field, Tabs, Toggles, Different types of Forms, Header, Footer, Hero banner, Body banner, User bar, Cards, Progress bar, and others are just a few examples of minor elements.
 
-![Making_Protoype](Images/Making_Prototype_1.png)
+<p align="center">
+    <img alt="Making_Prototype_1" src="Images/Making_Prototype_1.png" width="400" />
+</p>
 
 Then we started putting things together using all of the elements that were now in our assets. Then we added some spice to it by using plugins like Blush and Unsplash to add some photographs and graphics to our website. One such example can be found in our banner.
 
-![Making_Prototype_How_does_it_work](Images/Making_Prototye_2.png)
+<p align="center">
+    <img alt="Making_Prototype_2" src="Images/Making_Prototye_2.png" width="400" />
+</p>
 
 **Example pages from prototype: Hero page and additional pages**
 
-![Hero_2](Images/Hero_1.png)
-![Hero_2](Images/Hero_2.png)
+<p align="center">
+    <img alt="Hero_1" src="Images/Hero_1.png" width="400" />
+    <img alt="Hero_2" src="Images/Hero_2.png" width="400" />
+</p>
 
 ### Web Development: Creating the website
 
@@ -111,23 +127,33 @@ Without a design template from the user experience (UX) team, there didn't seem 
 In addition to the classic areas of a website such as header, main and footer, we had to identify and program functionalities to be ready to work early without a concrete design prototype. Based on the idea of what our Minimum Viable Product (MVP) functionality could be, we derived the necessary components for the web app to be programmed. In the process, we simultaneously dived into the React component library MUI. Here is an example of our first attempts. For our MVP, for example, the user had to be able to upload a photo and send it to the AI model. To do this, we started by programming a simple input field with a button. At this point, we assumed that we needed a search field where the user enters a URL.
 
 
-![first draft input](Images/input_field.png)
-![second draft input](Images/first_draft.png)
+<p align="center">
+    <img alt="input_field" src="Images/input_field.png" width="400" />
+    <img alt="first_draft" src="Images/first_draft.png" width="400" />
+</p>
+
 
 Besides a search function, we knew that the results from the AI model should also be displayed in the frontend. Without design sketches, we programmed pure functionalities without styling. For example, we added an image list, which should display the user query and the subsequent response of the AI model with suggestions in a result list as output in the frontend.
 
-![imageList_1](Images/imageList_1.png)
+<p align="center">
+    <img alt="imageList_1" src="Images/imageList_1.png" width="600" />
+</p>
 
 After the first design drafts came from UX, we continued programming the website and adding the designs accordingly. The design of the website has continuously evolved and we as developers had to react quickly and flexibly and adjust everything accordingly.
 
-![imageList_2](Images/imageList_2.png)
-![imageList_3](Images/imageList_3.png)
+<p align="center">
+    <img alt="imageList_2" src="Images/imageList_2.png" width="400" />
+    <img alt="imageList_3" src="Images/imageList_3.png" width="400" />
+</p>
 
 It was only two weeks before the end of the project that we found out that we were not using a search field that sends a URL to the AI model. Instead, we had to include a file upload functionality where the user picks a photo from his computer and gets a preview of the provided file. This requirement posed a challenge to us as prospective developers, as we had not learned anything in this direction before. First we decided to try a popular drag and drop solution for MUI, that comes from a third party and is known as Dropzone. However, we were not satisfied with Dropzone's solution. Through thorough research and learning-by-doing, we developed a simpler solution that also works on mobile devices by clicking on the upload area and choosing a file through the explorer window. In the meantime, we had also made the website responsive for mobile devices.
 
-![responsive_1](Images/responsive_1.png)
-![responsive_2](Images/responsive_2.png)
-![responsive_3](Images/responsive_3.png)
+<p align="center">
+    <img alt="responsive_1" src="Images/responsive_1.png" width="300" />
+    <img alt="responsive_2" src="Images/responsive_2.png" width="300" />
+    <img alt="responsive_3" src="Images/responsive_3.png" width="300" />
+</p>
+
 
 For testing purposes, we had rebuilt a backend server in our development environment in a very simple form and tried to connect it to the frontend. This was working very well in our simplified test run. However, the connection of the FE to the BE of the AI team was more difficult. In the BE itself, there were request errors that the AI team had to overcome in order to accept and process the data coming from the FE. On the other hand, AI had to make sure to provide the results of their model in a way that it was compatible with the frontend. For example, when transferring data from the BE to the FE, the data had to be passed in a JSON format so that we could extract the necessary information in the FE using a mapping function and allocating the data to its correct position in our Image List. However, due to syntax errors, this did not work smoothly and we had some struggle to find a working solution and to adjust the code accordingly. These are just a few examples of the challenges we overcame together as a team with WD and AI. The result is a working user query and the display of the AI model results in the FE.
 
