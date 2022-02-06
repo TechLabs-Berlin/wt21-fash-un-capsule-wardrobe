@@ -64,6 +64,10 @@ For installation, please follow the instructions below.
 2. Install React App dependencies inside the `frontend` diretory 
   ```
   npm install
+  
+  npm install @mui/material @emotion/react @emotion/styled
+  
+  npm install axios
   ```
 
 3. Start the local server environment 
