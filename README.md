@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # FashUp
 
 FashUp is an aggregated solution that allows the end-user to upload his/her favorite clothing item and to quickly find the most personalised second hand item.
@@ -103,11 +102,4 @@ We'd want to express our gratitude to the TechLabs staff as well as the numerous
 ### Project Mentor:
 
 - Bogdan Ciobotaru
-=======
-# wt21-fash-un-capsule-wardrobe
-UX report has everything all in 1 file. including some pictures from our prototype.
 
-Figma Prototype https://www.figma.com/file/3dWlQxdwyft5FvYZTrrWS0/ProjectFASHUP
-
-Mock up https://www.figma.com/file/SDULQuRJoaa1YlpyewT8ma/Wireframing-FashUp
->>>>>>> a271f3753d2dbab3989cd4e6bacaea1522e9e889
