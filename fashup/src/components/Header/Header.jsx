@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import "./Header.css";
+import React, { useState } from "react";
 import logo from "./logo_small.png";
 import {
   Button,
@@ -14,29 +13,16 @@ import {
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import DrawerComponent from "./DrawerComponent";
 
-// const Pages = [
-//   { label: "Home", value: "home" },
-//   { label: "About Us", value: "about" },
-//   { label: "Our API", value: "api" },
-//   { label: "Documentation", value: "docs" },
-//   { label: "Help", value: "help" },
-// ];
-
-const Header = ({ onLinkClick }) => {
+const Header = ({ onLinkClick, resetData }) => {
   const [value, setValue] = useState("home");
   const theme = useTheme();
-  // console.log(theme)
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  console.log(isMatch);
 
-  // useEffect(() => {
-  //   onLinkClick(value);
-  // }, [value]);
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <AppBar elevation={0} position="sticky">
       <Container disableGutters maxWidth="xl">
-        <Toolbar sx={{ backgroundColor: "#BFEEED" }}>
+        <Toolbar sx={{ backgroundColor: "#BFEEED", maxWidth: "100%" }}>
           {isMatch ? (
             <>
               <img
@@ -74,7 +60,11 @@ const Header = ({ onLinkClick }) => {
                   setValue(value);
                   onLinkClick(value);
                 }}
-                indicatorColor="primary"
+                onClick={() => {
+                  resetData();
+                }}
+                indicatorColor="secondary"
+                textColor="secondary"
               >
                 <Tab label="Home" value="home" />
                 <Tab label="About Us" value="about" />
@@ -84,7 +74,7 @@ const Header = ({ onLinkClick }) => {
               </Tabs>
               <Button
                 variant="outlined"
-                // color="primary"
+                color="primary"
                 size="large"
                 startIcon={<PersonAddAltIcon />}
                 sx={{

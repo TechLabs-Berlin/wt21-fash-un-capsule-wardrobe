@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Chip,
+  Box,
   Stack,
   Grid,
   Card,
   CardContent,
   CardMedia,
   Typography,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
 } from "@mui/material/";
 import "./ImageList.css";
 
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-
-export default function SearchResults({ imagePaths }) {
+export default function SearchResults({ results }) {
   const sortingOpts = [
     "Brand",
     "Type",
@@ -22,6 +25,12 @@ export default function SearchResults({ imagePaths }) {
     "Material",
     "Sustainability",
   ];
+
+  const [sorting, setSorting] = useState("");
+
+  const handleChange = (event) => {
+    setSorting(event.target.value);
+  };
 
   return (
     <Grid
@@ -40,14 +49,19 @@ export default function SearchResults({ imagePaths }) {
           All of your perfect matches!
         </Typography>
       </Grid>
-      <Grid item my="20px" sx={{ justifyContent: "center", display: "flex" }}>
+      <Grid
+        item
+        my="20px"
+        mx="4%"
+        sx={{ display: "flex", justifyContent: "space-between" }}
+      >
         <Stack direction="row" spacing={2} sx={{ flexWrap: "wrap" }}>
           {sortingOpts.map((item) => (
             <Chip
               sx={
                 sortingOpts.indexOf(item) % 2
                   ? {
-                      bgcolor: "#7986cb",
+                      bgcolor: "#5B8FD2",
                       fontSize: "25px",
                       height: "55px",
                       fontWeight: "bold",
@@ -66,6 +80,36 @@ export default function SearchResults({ imagePaths }) {
             />
           ))}
         </Stack>
+
+        <Box sx={{ minWidth: 120, ml: "50px" }}>
+          <FormControl
+            variant="filled"
+            fullWidth
+            sx={{
+              bgcolor: "white",
+              borderRadius: "10px",
+            }}
+          >
+            <InputLabel color="secondary" id="sorting">
+              Sort by
+            </InputLabel>
+            <Select
+              sx={{ borderRadius: "10px" }}
+              disableUnderline
+              value={sorting}
+              label="Sort by"
+              onChange={handleChange}
+            >
+              <MenuItem value={"brand"}>Brand</MenuItem>
+              <MenuItem value={"type"}>Type</MenuItem>
+              <MenuItem value={"color"}>Color</MenuItem>
+              <MenuItem value={"size"}>Size</MenuItem>
+              <MenuItem value={"price"}>Price</MenuItem>
+              <MenuItem value={"material"}>Material</MenuItem>
+              <MenuItem value={"sustainability"}>Sustainability</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
       </Grid>
       <Grid item>
         <Grid
@@ -77,7 +121,7 @@ export default function SearchResults({ imagePaths }) {
             py: "60px",
           }}
         >
-          {imagePaths.map((item) => (
+          {results.map((item) => (
             <Card
               elevation={5}
               sx={{ maxWidth: 345, borderRadius: "20px", mb: "20px" }}
@@ -99,7 +143,7 @@ export default function SearchResults({ imagePaths }) {
                   </Typography>
                 </a>
                 <Typography pb="5px" variant="body2" color="text.secondary">
-                  XS Energy Athletic Tee Super comfy material
+                  Descriptive text from vinted will be shown here very soon!
                 </Typography>
                 <Grid
                   container
@@ -118,7 +162,7 @@ export default function SearchResults({ imagePaths }) {
                       color="green"
                       fontWeight="bold"
                     >
-                      ${item.price}
+                      {item.price}
                     </Typography>
                   </Grid>
                 </Grid>

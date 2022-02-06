@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import axios from "axios";
-import FolderIcon from "./folder_icon_transparent.png";
 import PlaceholderIcon from "./placeholder.svg";
 import CloseIcon from "./close-icon.svg";
-import { Grid, Container, Box, Button } from "@mui/material";
+import { Grid, Box, Button } from "@mui/material";
 import "./ImagePreview.css";
 
-const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
+const ImagePreview = ({ handleImageUpload }) => {
   const [image, setImage] = useState(null);
   const [isUploaded, setIsUploaded] = useState(false);
   const [imagePreview, setImagePreview] = useState("");
@@ -39,10 +37,20 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
                   src={PlaceholderIcon}
                   draggable={"false"}
                   alt="placeholder"
-                  style={{ width: "auto", height: "auto", paddingTop: "10px" }}
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    paddingTop: "10px",
+                  }}
                 />
-                <p style={{ color: "#444", textAlign: "center" }}>
-                  Click to upload image
+                <p
+                  style={{
+                    color: "#444",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Click here to upload image
                 </p>
               </label>
 
@@ -78,7 +86,7 @@ const ImagePreview = ({ handleImageUpload, vintedUsername, dataAvailable }) => {
         <Button
           variant="contained"
           size="medium"
-          color="primary"
+          color="secondary"
           disabled={!isUploaded ? true : false}
           onClick={() => {
             handleImageUpload(image);
